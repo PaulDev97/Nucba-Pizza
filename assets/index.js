@@ -1,8 +1,11 @@
 import { category } from "./objectCategory.js";
 
 const listCategory = category;
+
+/* COMIENZO DE LOGICA DE RENDERS, SELECTORES DE PARAMETROS Y LLAMADOS DE DOM */
 console.log("lista categoria", listCategory[5].lista);
 
+/* Llamados a elementos del DOM */
 const filterButtons = document.querySelectorAll(".btn");
 const containerCategories = document.querySelector(".container__categories");
 const cardsContainer = document.querySelector(".container__render--cards");
@@ -40,6 +43,7 @@ const selectorParameter = (category) => {
 
 console.log("parameter ==>:", selectorParameter("batidos"));
 
+/* Contenedor del render */
 const renderCard = (lista) => {
   const { nombre, img, comentario, precio } = lista;
   return `
@@ -57,6 +61,7 @@ const renderCard = (lista) => {
     `;
 };
 
+/* Funcion renderizadora */
 const renderCards = (lista) => {
   cardsContainer.innerHTML = lista.map((comida) => renderCard(comida));
 };
