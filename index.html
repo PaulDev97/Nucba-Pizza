@@ -12,69 +12,48 @@
     <section class="section categorias">
       <h2 class="categories__title">Categorias</h2>
       <div class="container__categories">
-        <button class="btn btn__active" data-categorie="populares">
-          <div class="category category-populares">
-            <div class="category__icon">
-              <img class="icon__masPopulares" src="./assets/img/icons-categories/icon-masPopulares.png" alt="mas populares" />
-            </div>
-            <span>Populares</span>
-            <div class="category__rectangle"></div>
-          </div>
-        </button>
-        <button class="btn" data-categorie="pizzas">
-          <div class="category category-pizzas">
-            <div class="category__icon">
-              <img class="icon__pizzas" src="./assets/img/icons-categories/icon-pizzas.png" alt="categoria pizzas" />
-            </div>
-            <span>Pizzas</span>
-            <div class="category__rectangle"></div>
-          </div>
-        </button>
-        <button class="btn" data-categorie="hamburguesas">
-          <div class="category category-hamburguesas">
-            <div class="category__icon">
-              <img class="icon__hamburguesa" src="./assets/img/icons-categories/icon-hamburguesa.png" alt="categoria hamburguesas" />
-            </div>
-            <span>Hamburguesas</span>
-            <div class="category__rectangle"></div>
-          </div>
-        </button>
-        <button class="btn" data-categorie="papasFritas">
-          <div class="category category-napapuki">
-            <div class="category__icon">
-              <img class="icon__papasFritas" src="./assets/img/icons-categories/icon-papasFritas.png" alt="categoria napapuki" />
-            </div>
-            <span>Napapuki</span>
-            <div class="category__rectangle"></div>
-          </div>
-        </button>
-        <button class="btn" data-categorie="wraps">
-          <div class="category category-wraps">
-            <div class="category__icon">
-              <img class="icon__wraps" src="./assets/img/icons-categories/icon-wraps.png" alt="categoria wraps" />
-            </div>
-            <span>Wraps</span>
-            <div class="category__rectangle"></div>
-          </div>
-        </button>
-        <button class="btn" data-categorie="mexicanFood">
-          <div class="category category-mexicanFood">
-            <div class="category__icon">
-              <img class="icon__mexicanFood" src="./assets/img/icons-categories/icon-mexicanFood.png" alt="categoria mexican food" />
-            </div>
-            <span>Mexican Food</span>
-            <div class="category__rectangle"></div>
-          </div>
-        </button>
-        <button class="btn" data-categorie="batidos">
-          <div class="category category-batidos">
-            <div class="category__icon">
-              <img class="icon__batidos" src="./assets/img/icons-categories/icon-batidos.png" alt="categoria batidos" />
-            </div>
-            <span>Batidos</span>
-            <div class="category__rectangle"></div>
-          </div>
-        </button>
+        <div class="category category__active" data-filter="populares">
+          <img src="./assets/img/icons-categories/icon-masPopulares.png" alt="mas populares" />
+          <span>Populares</span>
+          <div class="category__rectangle"></div>
+          <button class="btn btn__active" data-categorie="populares"></button>
+        </div>
+        <div class="category" data-filter="pizzas">
+          <img src="./assets/img/icons-categories/icon-pizzas.png" alt="pizzas" />
+          <span>Pizzas</span>
+          <div class="category__rectangle"></div>
+          <button class="btn" data-categorie="pizzas"></button>
+        </div>
+        <div class="category" data-filter="hamburguesas">
+          <img src="./assets/img/icons-categories/icon-hamburguesa.png" alt="Hamburguesas" />
+          <span>Hamburguesas</span>
+          <div class="category__rectangle"></div>
+          <button class="btn" data-categorie="hamburguesas"></button>
+        </div>
+        <div class="category" data-filter="papas fritas">
+          <img src="./assets/img/icons-categories/icon-papasFritas.png" alt="papas fritas" />
+          <span>Napapuki</span>
+          <div class="category__rectangle"></div>
+          <button class="btn" data-categorie="papas fritas"></button>
+        </div>
+        <div class="category" data-filter="wraps">
+          <img src="./assets/img/icons-categories/icon-wraps.png" alt="wraps" />
+          <span>Wraps</span>
+          <div class="category__rectangle"></div>
+          <button class="btn" data-categorie="wraps"></button>
+        </div>
+        <div class="category" data-filter="mexican food">
+          <img src="./assets/img/icons-categories/icon-mexicanFood.png" alt="mexican food" />
+          <span>Mexican Food</span>
+          <div class="category__rectangle"></div>
+          <button class="btn" data-categorie="mexican food"></button>
+        </div>
+        <div class="category" data-filter="batidos">
+          <img src="./assets/img/icons-categories/icon-batidos.png" alt="batidos" />
+          <span>Batidos</span>
+          <div class="category__rectangle"></div>
+          <button class="btn" data-categorie="batidos"></button>
+        </div>
       </div>
     </section>
     <section class="section render__cards">

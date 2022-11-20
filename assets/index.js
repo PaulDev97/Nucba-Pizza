@@ -3,45 +3,52 @@ import { category } from "./objectCategory.js";
 const listCategory = category;
 
 /* COMIENZO DE LOGICA DE RENDERS, SELECTORES DE PARAMETROS Y LLAMADOS DE DOM */
-console.log("lista categoria", listCategory[5].lista);
+console.log("lista categoria", listCategory);
 
 /* Llamados a elementos del DOM */
 const filterButtons = document.querySelectorAll(".btn");
 const containerCategories = document.querySelector(".container__categories");
 const cardsContainer = document.querySelector(".container__render--cards");
+const categoryContainers = document.querySelectorAll(".category");
 
+/* -------------------Funciones seccion categorias------------------- */
 const categoryController = {
   searchCategory: "populares",
 };
 
 const selectorParameter = (category) => {
-  switch (category) {
-    case "pizzas":
-      "pizzas";
-      break;
-    case "hamburguesas":
-      "hamburguesas";
-      break;
-    case "papasFritas":
-      "papasFritas";
-      break;
-    case "wraps":
-      "wraps";
-      break;
-    case "mexicanFood":
-      "mexicanFood";
-      break;
-    case "batidos":
-      "batidos";
-      break;
-    default:
-      "populares";
-      break;
-  }
-  return category;
+  return (categoryController.searchCategory = category);
 };
 
-console.log("parameter ==>:", selectorParameter("batidos"));
+const changeCategory = (e) => {
+  if (!e.target.classList.contains("btn") || e.target.classList.contains("btn__active")) return;
+  const btnSelected = e.target.dataset.categorie;
+  selectorParameter(btnSelected);
+  const buttons = [...filterButtons];
+  const categoryActive = [...categoryContainers];
+
+  let setDATA = [];
+
+  buttons.forEach((btn) => {
+    const datasetName = btn.dataset.categorie;
+    const datasetBtn = btn.dataset.categorie !== btnSelected;
+    setDATA.push({ datasetName, datasetBtn });
+  });
+
+  const findFalse = setDATA.find((e) => e.datasetBtn == false);
+
+  categoryActive.forEach((cat) => {
+    const datasetFilter = cat.dataset.filter;
+    if (datasetFilter != findFalse.datasetName) {
+      cat.classList.remove("category__active");
+    } else {
+      cat.classList.add("category__active");
+    }
+  });
+  console.log(setDATA);
+};
+
+console.log("controlador de categoria:", categoryController);
 
 /* Contenedor del render */
 const renderCard = (lista) => {
@@ -65,15 +72,21 @@ const renderCard = (lista) => {
 const renderCards = (lista) => {
   cardsContainer.innerHTML = lista.map((comida) => renderCard(comida));
 };
-/* 
-const filtraje = (btn) => {
-  console.log(btn);
-  return btn.forEach((e) => console.log(e));
+
+const getCategory = () => {
+  const findCategory = () => {
+    const categoryFind = listCategory.find((e) => e.seccion == categoryController.searchCategory);
+    return categoryFind.lista;
+  };
+  return renderCards(findCategory());
 };
-console.log("filterButtons:", filtraje(filterButtons)); */
 
 const init = () => {
-  window.addEventListener("DOMContentLoaded", renderCards());
-  /* window.addEventListener("DOMContentLoaded", renderCards(listCategory[5].lista)); */
+  window.addEventListener("DOMContentLoaded", getCategory);
+  containerCategories.addEventListener("click", changeCategory);
+  containerCategories.addEventListener("click", getCategory);
 };
 init();
+
+/* Cambiar parametro por defecto a populares */
+/* Unir css de renders */
