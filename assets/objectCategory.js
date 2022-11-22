@@ -108,59 +108,58 @@ export const category = [
   },
 
   {
-    seccion: "hamburguesas",
-    lista: [
+    seccion:"hamburguesas",
+    lista:[
       {
-        nombre: "",
-        comentario: "",
-        img: "img/.jpg",
-        precio: 80,
+        nombre:"Hamburguesa Clásica",
+        comentario:"No falla",
+        img:'img/hamburguesa-clasica.jpg',
+        precio:80
       },
       {
-        nombre: "",
-        comentario: "",
-        img: "img/.jpg",
-        precio: 80,
+        nombre:"Chicken burguer",
+        comentario:"Completa",
+        img:'img/hamburguesa-pollo.jpeg',
+        precio:80
       },
       {
-        nombre: "",
-        comentario: "",
-        img: "img/.jpg",
-        precio: 80,
+        nombre:"Hamburguesa de panceta",
+        comentario:"Onion & Bacon",
+        img:'img/hamburguesa-panceta.jpg',
+        precio:80
       },
       {
-        nombre: "",
-        comentario: "",
-        img: "img/.jpg",
-        precio: 80,
+        nombre:"Hamburguesa Vegetariana",
+        comentario:"Explosión de sabores",
+        img:'img/hamburguesa-vegetariana.jpg',
+        precio:80
       },
       {
-        nombre: "",
-        comentario: "",
-        img: "img/.jpg",
-        precio: 80,
+        nombre:"Hamburguesa Criolla",
+        comentario:"Clásica salsa criolla",
+        img:'img/criolla-especial.jpg',
+        precio:80
       },
       {
-        nombre: "",
-        comentario: "",
-        img: "img/.jpg",
-        precio: 80,
+        nombre:"Hamburguesa Doble carne",
+        comentario:"Antiácido incluído",
+        img:'img/doble-carne.jpg',
+        precio:80
       },
       {
-        nombre: "",
-        comentario: "",
-        img: "img/.jpg",
-        precio: 80,
+        nombre:"Hamburguesa Doble queso",
+        comentario:"Cheddar+cheddar",
+        img:'img/doble-cheddar.jpg',
+        precio:80
       },
       {
-        nombre: "",
-        comentario: "",
-        img: "img/.jpg",
-        precio: 80,
-      },
-    ],
+        nombre:"Blacky bread Burguer",
+        comentario:"All-Black",
+        img:'img/hamburguesa-negra.jpg',
+        precio:80
+      }
+    ]
   },
-
   {
     seccion: "papas fritas",
     lista: [

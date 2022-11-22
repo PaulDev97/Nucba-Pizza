@@ -8,7 +8,101 @@ body {
   font-family: "cambria", "Montserrat";
   
 }
+/*ESTILOS NAVBAR*/
+body {
+  background-color: var(--negro);
+}
 
+:root {
+
+  --naranja: #ffa100;
+  --naranja2: #ff9300;
+  --rojo:#fc2933;
+  --negro:#252525;
+  --blanco: #ffffff;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-left: 45px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 40px;
+  gap: 32px;
+}
+
+.home-icon a {
+  color: var(--naranja);
+  text-decoration: none;
+
+}
+
+.navbar i {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.navbar-icon button {
+  color: var(--naranja2);
+  background: none;
+  border: none;
+
+}
+
+.navbar-icon button:hover{
+  color: var(--rojo);
+  transition-duration: 1s;
+}
+
+/*Cantidad de items en el carrito*/
+.cart-button .cart-items {
+  border-radius: 50%;
+  background-color: var(--rojo);
+  font-size: 12px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing:border-box;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  top: -14px;
+  left: -14px;
+  border: 1px solid var(--blanco);
+  color: var(--blanco);
+}
+
+
+/*Menu carrito*/
+
+.cart-menu {
+
+  display: none;
+}
+
+/*Menu LOGIN*/
+
+.login-menu {
+
+  display: none;
+}
+
+
+/*FIN ESILOS NAVBAR*/
 
 
 /* ----------Seccion del main-------- */

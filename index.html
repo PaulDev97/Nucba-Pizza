@@ -10,11 +10,92 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
     <title>Nucba Pizza</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
 
+  <body>
+<header>
+    <div class="logo-container">
+      <a href="./index.html"><img src="./img/nucbazappiicon 1.png" alt="Nucba Pizza"></a>
+    </div>
+    <div class="navbar-container">
+      <nav class="navbar">
+        <div class="navbar-icon">
+          <a href="./index.html">
+            <span>
+              <button>
+                <i class="fa-solid fa-house"></i> Home
+              </button>
+            </span>
+          </a>
+        </div>
+
+        <div class="navbar-icon">
+          <span class="cart-button">
+            <button type="button" class="cart-btn">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+            <span class="cart-items">5</span>
+          </span>
+
+          <div class="cart-menu">
+            <div class="cart-close-container">
+              <button type="button" class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <h2 class="cart-title">Tu pedido</h2>
+            <div class="cart-products-container">
+              <div class="cart-product-list">
+                <div class="minicard-product-container">
+                  <img src="./img/.jpg" alt="">
+                  <div class="minicard-description">
+                    <h3 class="minicard-name">Nombre Producto</h3>
+                    <p class="minicard-comment">Comentario breve</p>
+                    <p class="minicard-price">$ PRECIO</p>
+                  </div>
+                  <div class="minicard-qty-btns">
+                    <button type="button"><i class="fa-solid fa-minus"></i></button>
+                    <div class="minicard-product-qty"></div>
+                    <button type="button"><i class="fa-solid fa-plus"></i></button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="cart-resume">
+              <div class="cart-subtotal">
+                <p>Subtotal:</p>
+                <p>$SUMA</p>
+              </div>
+              <div class="cart-shipment">
+                <p>Envío:</p>
+                <p>Gratis</p>
+              </div>
+              <hr>
+              <div class="cart-total">
+                <h2>Total:</h2>
+                <p>$SUMA</p>
+              </div>
+            </div>
+            <button class="cart-buy-btn">Comprar</button>
+            <small>Ver más productos</small>
+          </div>
+        </div>
+
+        <div class="login-icon navbar-icon">
+          <button type="button" class="login-icon">
+            <i class="fa-solid fa-user"></i>
+          </button>
+          <div class="login-menu">
+
+          </div>
+
+        </div>
+
+    </div>
+    </nav>
+  </header>
 
   <main class="main-container">
     
