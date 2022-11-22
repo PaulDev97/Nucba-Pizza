@@ -19,8 +19,8 @@
       <button>Ver mas</button>
     </div>
     <div class="img_container">
-      <img src="img/pizza-main2.png" alt="">
-      <img src="img/pizza-main.png" alt="">
+      <img src="assets/img/pizza-main2.png" alt="">
+      <img src="assets/img/pizza-main.png" alt="">
     </div>
 
   </main>
@@ -31,7 +31,7 @@
       <div class="list-reco">
         <div class="card">
           <div class="img_reco_container">
-            <img src="img/mozzarella.jpg" alt="">
+            <img src="assets/img/mozzarella.jpg" alt="">
           </div>
           <div class="info-card">
             <h3>Pizza</h3>
@@ -43,7 +43,7 @@
 
         <div class="card">
           <div class="img_reco_container">
-            <img src="img/mozzarella.jpg" alt="">
+            <img src="assets/img/mozzarella.jpg" alt="">
           </div>
           <div class="info-card">
             <h3>Pizza</h3>
@@ -55,7 +55,7 @@
 
         <div class="card">
           <div class="img_reco_container">
-            <img src="img/futos-rojos.jpg" alt="">
+            <img src="/assets/img/frutos-rojos.jpg" alt="">
           </div>
           <div class="info-card">
             <h3>Frutos rojos</h3>
@@ -71,6 +71,58 @@
   </section>
 
 
+   <!---------------------- Comienza CATEGORIAS ------------------------>
+   <section class="section categorias">
+    <h2 class="categories__title">Categorias</h2>
+    <div class="container__categories">
+      <div class="category category__active" data-filter="populares">
+        <img src="./assets/img/icons-categories/icon-masPopulares.png" alt="mas populares" />
+        <span>Populares</span>
+        <div class="category__rectangle"></div>
+        <button class="btn btn__active" data-categorie="populares"></button>
+      </div>
+      <div class="category" data-filter="pizzas">
+        <img src="./assets/img/icons-categories/icon-pizzas.png" alt="pizzas" />
+        <span>Pizzas</span>
+        <div class="category__rectangle"></div>
+        <button class="btn" data-categorie="pizzas"></button>
+      </div>
+      <div class="category" data-filter="hamburguesas">
+        <img src="./assets/img/icons-categories/icon-hamburguesa.png" alt="Hamburguesas" />
+        <span>Hamburguesas</span>
+        <div class="category__rectangle"></div>
+        <button class="btn" data-categorie="hamburguesas"></button>
+      </div>
+      <div class="category" data-filter="papas fritas">
+        <img src="./assets/img/icons-categories/icon-papasFritas.png" alt="papas fritas" />
+        <span>Napapuki</span>
+        <div class="category__rectangle"></div>
+        <button class="btn" data-categorie="papas fritas"></button>
+      </div>
+      <div class="category" data-filter="wraps">
+        <img src="./assets/img/icons-categories/icon-wraps.png" alt="wraps" />
+        <span>Wraps</span>
+        <div class="category__rectangle"></div>
+        <button class="btn" data-categorie="wraps"></button>
+      </div>
+      <div class="category" data-filter="mexican food">
+        <img src="./assets/img/icons-categories/icon-mexicanFood.png" alt="mexican food" />
+        <span>Mexican Food</span>
+        <div class="category__rectangle"></div>
+        <button class="btn" data-categorie="mexican food"></button>
+      </div>
+      <div class="category" data-filter="batidos">
+        <img src="./assets/img/icons-categories/icon-batidos.png" alt="batidos" />
+        <span>Batidos</span>
+        <div class="category__rectangle"></div>
+        <button class="btn" data-categorie="batidos"></button>
+      </div>
+    </div>
+  </section>
+  <section class="section render__cards">
+    <div class="container__render--cards popu-card-container"></div>
+  </section>
+  <!---------------------- Fin CATEGORIAS ------------------------>
 
 
 
@@ -80,5 +132,8 @@
 
 
   <script src="index.js" type="module"></script>
+  <script src="./assets/objectCategory.js" type="module"></script>
+  <script src="./assets/index.js" type="module"></script>
 </body>
-</html>
+
+
