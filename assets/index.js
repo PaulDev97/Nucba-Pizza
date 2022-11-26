@@ -11,6 +11,14 @@ const containerCategories = document.querySelector(".container__categories");
 const cardsContainer = document.querySelector(".popu-card-container");
 const categoryContainers = document.querySelectorAll(".category");
 const categoryTitle = document.querySelector(".container__categoty--title");
+const btnCart = document.querySelector(".btn-cart");
+const btnCartButtonClose = document.querySelector(".btn__cart--close");
+const containerCart = document.querySelector(".container__cart--toggle");
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+const saveToLocalStorage = (key) => {
+  localStorage.setItem("cart", JSON.stringify(key));
+};
 
 /* -------------------Funciones seccion categorias------------------- */
 /* Funcion que encuentra la categoria actual y llama a la funcion renderizadora*/
@@ -67,7 +75,9 @@ const renderCard = (lista) => {
   <h3 class="popu-eslogan">${comentario}</h3>
   <div class="popu-precio-btn-container">
   <h2 class="popu-precio">$${precio}</h2>
-  <button class="popu-btn">Agregar</button>
+  <button class="popu-btn" data-name="${nombre}" data-precio="${precio}" data-comentario="${comentario}" data-img="${img}" >
+  Agregar
+  </button>
   </div>
   </div>
   `;
@@ -99,12 +109,19 @@ const getCategoryTitle = () => {
 };
 console.log("getCategoryTitle:", getCategoryTitle());
 
+/* --------funciones para el carrito--------- */
+const toggleMenu = () => {
+  containerCart.classList.toggle("container__cart--toggle");
+};
+
 const init = () => {
   window.addEventListener("DOMContentLoaded", getCategory);
   window.addEventListener("DOMContentLoaded", getCategoryTitle);
   containerCategories.addEventListener("click", changeCategory);
   containerCategories.addEventListener("click", getCategory);
   containerCategories.addEventListener("click", getCategoryTitle);
+  btnCart.addEventListener("click", toggleMenu);
+  btnCartButtonClose.addEventListener("click", toggleMenu);
 };
 init();
 

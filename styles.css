@@ -22,6 +22,7 @@ header {
   padding: 4vh 5%;
 }
 
+/* Estilos navbar */
 nav {
   display: flex;
   align-items: center;
@@ -29,6 +30,7 @@ nav {
   gap: 65px;
 }
 
+/* Iconos estilos navbar */
 .icon__house--navbar,
 .icon__cart--navbar,
 .icon__user--navbar {
@@ -36,6 +38,7 @@ nav {
   color: #ffa100;
 }
 
+/* Boton del carrito */
 .btn-cart {
   display: flex;
   align-items: center;
@@ -44,6 +47,7 @@ nav {
   border: none;
 }
 
+/* Container Home icono y texto "home" */
 .a__main--navbar {
   display: flex;
   align-items: center;
@@ -55,6 +59,7 @@ nav {
   gap: 15px;
 }
 
+/* Burbuja contador carrito numero */
 .cart__bubble--count {
   position: absolute;
   display: flex;
@@ -75,18 +80,27 @@ span {
   color: white;
 }
 
+.container__cart--toggle {
+  display: none;
+}
+
+/* Container menu desplegable del carrito */
 .container__cart {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: 25px;
-  width: 453px;
-  height: 891px;
+  gap: 10px;
+  width: 337px;
+  height: 655px;
   background-color: #252525;
-  box-shadow: 0px 0px 50px rgba(1, 2, 7, 0.5);
+  box-shadow: 0px 0px 50px rgb(1 2 7);
+  position: absolute;
+  top: 0;
+  right: 0px;
 }
 
+/* Medidas boton X cerrar */
 .container__button--close {
   width: 100%;
   display: flex;
@@ -95,6 +109,7 @@ span {
   padding-top: 20px;
 }
 
+/* Estilos boton X cerrar */
 .btn__cart--close {
   width: 25px;
   height: 25px;
@@ -104,6 +119,7 @@ span {
   color: #ffffff;
 }
 
+/* Titulo */
 .span__tusProductos {
   width: 100%;
   display: flex;
@@ -114,7 +130,39 @@ span {
   font-size: 29px;
 }
 
-/* RenderCARDCARRITO: */
+/* Container de cards de carrito */
+.container__products--cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50%;
+  width: 100%;
+  overflow-y: scroll;
+  gap: 15px;
+}
+
+/*----------Estilos scrollbar carrito ----------*/
+.container__products--cart::-webkit-scrollbar {
+  width: 11px;
+}
+
+.container__products--cart::-webkit-scrollbar-track {
+  background: linear-gradient(98.81deg, #ffa100 -0.82%, #fb103d 101.53%);
+}
+
+.container__products--cart::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 15px;
+  border: 3px solid #ffa100;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+/*----------Termina estilos scrollbar carrito ----------*/
+
+/* Estilos cards carrito */
 .render__products--cart {
   display: flex;
   background: #252525;
@@ -123,10 +171,12 @@ span {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 90%;
-  height: 15%;
+  width: 95%;
+  height: 100px;
+  gap: 3px;
 }
 
+/* Medidas imagen carrito card comida */
 .image__container--cart {
   width: 30%;
   height: 85%;
@@ -137,37 +187,40 @@ span {
   border-radius: 16px;
 }
 
+/* Flex card carrito */
 .info__card--cart {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-evenly;
-  height: 95%;
+  height: 100%;
 }
 
 .title__card--cart {
-  font-size: 20px;
+  font-size: 18px;
   color: white;
   font-weight: 500;
 }
 
 .comentario__card--cart {
   font-weight: 400;
-  font-size: clamp(12px, 18px, 100%);
+  font-size: clamp(12px, 14px, 100%);
   letter-spacing: 1px;
   opacity: 0.3;
   color: #ffffff;
 }
 
+/* Estilos de precio de comida card */
 .price__card--cart {
   font-weight: 700;
-  font-size: 22px;
+  font-size: 20px;
   background: linear-gradient(98.81deg, #ffa100 -0.82%, #ffa100 -0.81%, #ff005c 101.53%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
+/* Container button add y minus cart */
 .amountSettings__card--cart {
   display: flex;
   align-items: center;
@@ -176,8 +229,38 @@ span {
   gap: 5px;
 }
 
-/* RenderCARDCARRITO: */
-.container__subYTotal--cart {
+/* Medidas buttons add y minus de card en carrito */
+.container__minusButton--cart,
+.container__addButton--cart {
+  border-radius: 8px;
+  width: 25px;
+  height: 25px;
+  background: linear-gradient(98.81deg, #ffa100 -0.82%, #ffa100 -0.81%, #ff005c 101.53%);
+}
+
+.container__minusButton--cart {
+  opacity: 0.1;
+}
+
+/* Estilos y medidas buttons card cart */
+.button__minus--cart,
+.button__add--cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 20px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-width: 0;
+}
+
+/* Subtotal y envio */
+.container__subYEnvio--cart {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -185,6 +268,7 @@ span {
   gap: 20px;
 }
 
+/* Estilos a Subtotal, envios, y total */
 .cart__subtotal,
 .cart__envio,
 .cart__total {
@@ -197,6 +281,7 @@ span {
   padding: 0 25px;
 }
 
+/* Linea divisoria cart */
 .line__divider {
   background: rgba(157, 157, 157, 0.4);
   width: 95%;
@@ -206,14 +291,15 @@ span {
 
 .cart__total {
   font-weight: 500;
-  font-size: 25px;
+  font-size: 23px;
 }
 .cart__total > span:last-child {
   color: #ff7a00;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 23px;
 }
 
+/* Estilos button comprar cart */
 .btn__comprar--cart {
   background: linear-gradient(98.81deg, #ffa100 -0.82%, #fb103d 101.53%);
   box-shadow: 11px 28px 50px rgb(20 78 90 / 20%);
@@ -231,7 +317,7 @@ span {
   letter-spacing: 1.5px;
   font-size: 17px;
   opacity: 0.3;
-  padding-bottom: 25px;
+  padding-bottom: 5px;
   list-style: none;
   text-decoration: none;
   color: #ffffff;
@@ -240,35 +326,14 @@ span {
   text-decoration: underline;
 }
 
-.container__minusButton--cart,
-.container__addButton--cart {
-  border-radius: 8px;
-  width: 25px;
-  height: 25px;
-  background: linear-gradient(98.81deg, #ffa100 -0.82%, #ffa100 -0.81%, #ff005c 101.53%);
+/* Fondo blureado cuando se abre el carrito */
+.overlay {
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
 }
-
-.container__minusButton--cart {
-  opacity: 0.1;
-}
-
-.button__minus--cart,
-.button__add--cart {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  width: 100%;
-  height: 100%;
-  color: white;
-  font-size: 20px;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  border-width: 0;
-}
-/* EMPIEZA HEADER, NAVBAR, Y CARRITO ESTILOS */
-
 /* ----------------------------------- */
 
 /* ----------Seccion del main-------- */
@@ -330,7 +395,6 @@ span {
   width: 50%;
   height: 300px;
 }
-
 /* ----------------------------------- */
 
 /* ------------Recomendados---------- */
