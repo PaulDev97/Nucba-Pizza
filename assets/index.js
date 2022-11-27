@@ -13,7 +13,8 @@ const categoryContainers = document.querySelectorAll(".category");
 const categoryTitle = document.querySelector(".container__categoty--title");
 const btnCart = document.querySelector(".btn-cart");
 const btnCartButtonClose = document.querySelector(".btn__cart--close");
-const containerCart = document.querySelector(".container__cart--toggle");
+const containerCartToggle = document.querySelector(".container__cart--toggle");
+const closeCart = document.querySelector(".close__cart");
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 const saveToLocalStorage = (key) => {
@@ -111,7 +112,7 @@ console.log("getCategoryTitle:", getCategoryTitle());
 
 /* --------funciones para el carrito--------- */
 const toggleMenu = () => {
-  containerCart.classList.toggle("container__cart--toggle");
+  containerCartToggle.classList.toggle("container__cart--toggle");
 };
 
 const init = () => {
@@ -123,6 +124,7 @@ const init = () => {
   btnCart.addEventListener("click", toggleMenu);
   btnCartButtonClose.addEventListener("click", toggleMenu);
 };
+
 init();
 
 /* Cambiar parametro por defecto a populares */

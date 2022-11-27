@@ -326,14 +326,6 @@ span {
   text-decoration: underline;
 }
 
-/* Fondo blureado cuando se abre el carrito */
-.overlay {
-  filter: blur(3px);
-  -webkit-filter: blur(3px);
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-}
 /* ----------------------------------- */
 
 /* ----------Seccion del main-------- */
