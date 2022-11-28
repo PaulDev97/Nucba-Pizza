@@ -61,7 +61,7 @@ const renderCard = (lista) => {
   const { nombre, img, comentario, precio } = lista;
   return `
   <div class="popu-card">
-  <div class="popu-img-container" style="background-image: url(${img})" alt="${nombre}">
+   <div class="popu-img-container"> <img src="${img}"></img>
   </div>
   <h3 class="popu-name">${nombre}</h3>
   <h3 class="popu-eslogan">${comentario}n</h3>
