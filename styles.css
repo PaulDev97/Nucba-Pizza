@@ -47,6 +47,9 @@ nav {
   border: none;
 }
 
+.btn-cart .disabled {
+  display: none;
+}
 /* Container Home icono y texto "home" */
 .a__main--navbar {
   display: flex;
@@ -133,13 +136,17 @@ span {
 /* Container de cards de carrito */
 .container__products--cart {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   height: 50%;
   width: 100%;
   overflow-y: scroll;
   gap: 15px;
+}
+
+.correction{
+  justify-content: center;
 }
 
 /*----------Estilos scrollbar carrito ----------*/
@@ -180,7 +187,6 @@ span {
 .image__container--cart {
   width: 30%;
   height: 85%;
-  background-image: url(./assets/img/mexicanFood-imgs/mexicanFood-barbacoa.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -271,7 +277,7 @@ span {
 /* Estilos a Subtotal, envios, y total */
 .cart__subtotal,
 .cart__envio,
-.cart__total {
+.container__cart--total {
   width: 100%;
   display: flex;
   align-items: center;
@@ -289,11 +295,11 @@ span {
   border-radius: 15px;
 }
 
-.cart__total {
+.container__cart--total {
   font-weight: 500;
   font-size: 23px;
 }
-.cart__total > span:last-child {
+.cart__total {
   color: #ff7a00;
   font-weight: 700;
   font-size: 23px;
@@ -326,6 +332,24 @@ span {
   text-decoration: underline;
 }
 
+.cart__empty--message {
+  color: white;
+  font: inherit;
+  font-size: 20px;
+  margin: 0 3%;
+  padding: 2%;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 3px 3px 2px black;
+  background: rgba(22, 84, 86, 0.763);
+  border-radius: 25px;
+}
+
+.btn__comprar--cart.disabled {
+  background: rgba(106, 106, 106, 0.486);
+  border: none;
+  cursor: not-allowed;
+}
 /* ----------------------------------- */
 
 /* ----------Seccion del main-------- */
@@ -466,7 +490,6 @@ span {
   width: 60px;
   padding: 5px;
   border-radius: 10px;
-  cursor: pointer;
   background: linear-gradient(to right, #ffa100, #fb103d);
   border: none;
   color: #fff;
@@ -530,9 +553,11 @@ span {
   border: none;
   outline: none;
 }
+
 button:hover {
   cursor: pointer;
 }
+
 .category__active {
   background: #4d4d4d;
 }
