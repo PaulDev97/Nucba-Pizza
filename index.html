@@ -6,21 +6,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <title>Nucba Pizza</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mediaQuerys.css" />
   </head>
   <body>
-    <!-- ------------------------------------Los mas populares---------------------------------->
-    <section class="popu">
-      <h2 class="popu-title">Los más populares</h2>
-      <div class="popu-card-container" id="popu-container"></div>
+    <main class="main-container">
+      <div class="slogan-container">
+        <h2>Si tenes Zappi,<br /><span>tenes Nucba.</span></h2>
+        <p>Busca lo que quieras y nucba te quedes sin comida</p>
+        <button>Ver mas</button>
+      </div>
+      <div class="img_container">
+        <img src="assets/img/pizza-main2.png" alt="" />
+        <img src="assets/img/pizza-main.png" alt="" />
+      </div>
+    </main>
+
+    <section class="reco_container">
+      <div class="reco">
+        <h2>Hoy te recomendamos</h2>
+        <div class="list-reco">
+          <div class="card">
+            <div class="img_reco_container">
+              <img src="assets/img/mozzarella.jpg" alt="" />
+            </div>
+            <div class="info-card">
+              <h3>Pizza</h3>
+              <span>Comentario</span>
+              <span>$500</span>
+            </div>
+            <button>Agregar</button>
+          </div>
+
+          <div class="card">
+            <div class="img_reco_container">
+              <img src="assets/img/mozzarella.jpg" alt="" />
+            </div>
+            <div class="info-card">
+              <h3>Pizza</h3>
+              <span>Comentario</span>
+              <span>$500</span>
+            </div>
+            <button>Agregar</button>
+          </div>
+
+          <div class="card">
+            <div class="img_reco_container">
+              <img src="assets/img/frutos-rojos.jpg" alt="" />
+            </div>
+            <div class="info-card">
+              <h3>Frutos rojos</h3>
+              <span>Aguante el rojo</span>
+              <span>$500</span>
+            </div>
+            <button>Agregar</button>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- --------------------------------------------------------------------------------------->
+    <!---------------------- Comienza CATEGORIAS ------------------------>
+    <section class="section categorias">
+      <h2 class="categories__title">Categorias</h2>
+      <div class="container__categories">
+        <div class="category category__active" data-filter="populares">
+          <img src="./assets/img/icons-categories/icon-masPopulares.png" alt="mas populares" />
+          <span>Populares</span>
+          <div class="category__rectangle"></div>
+          <button class="btn btn__active" data-categorie="populares"></button>
+        </div>
+        <div class="category" data-filter="pizzas">
+          <img src="./assets/img/icons-categories/icon-pizzas.png" alt="pizzas" />
+          <span>Pizzas</span>
+          <div class="category__rectangle"></div>
+          <button class="btn" data-categorie="pizzas"></button>
+        </div>
+        <div class="category" data-filter="hamburguesas">
+          <img src="./assets/img/icons-categories/icon-hamburguesa.png" alt="Hamburguesas" />
+          <span>Hamburguesas</span>
+          <div class="category__rectangle"></div>
+          <button class="btn" data-categorie="hamburguesas"></button>
+        </div>
+        <div class="category" data-filter="papas fritas">
+          <img src="./assets/img/icons-categories/icon-papasFritas.png" alt="papas fritas" />
+          <span>Napapuki</span>
+          <div class="category__rectangle"></div>
+          <button class="btn" data-categorie="papas fritas"></button>
+        </div>
+        <div class="category" data-filter="wraps">
+          <img src="./assets/img/icons-categories/icon-wraps.png" alt="wraps" />
+          <span>Wraps</span>
+          <div class="category__rectangle"></div>
+          <button class="btn" data-categorie="wraps"></button>
+        </div>
+        <div class="category" data-filter="mexican food">
+          <img src="./assets/img/icons-categories/icon-mexicanFood.png" alt="mexican food" />
+          <span>Mexican Food</span>
+          <div class="category__rectangle"></div>
+          <button class="btn" data-categorie="mexican food"></button>
+        </div>
+        <div class="category" data-filter="batidos">
+          <img src="./assets/img/icons-categories/icon-batidos.png" alt="batidos" />
+          <span>Batidos</span>
+          <div class="category__rectangle"></div>
+          <button class="btn" data-categorie="batidos"></button>
+        </div>
+      </div>
+    </section>
+    <section class="section popu">
+      <div class="container__categoty--title"></div>
+      <div class="popu-card-container"></div>
+    </section>
+    <!---------------------- Fin CATEGORIAS ------------------------>
+
+    
+    <!----------------------------------------------------------------------------------------->
+
     <script src="./assets/objectCategory.js" type="module"></script>
     <script src="./assets/index.js" type="module"></script>
   </body>

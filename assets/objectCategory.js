@@ -1,5 +1,4 @@
 export const category = [
-
   {
     seccion: "populares",
     lista: [

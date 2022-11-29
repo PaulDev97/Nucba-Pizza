@@ -1,43 +1,109 @@
-import { category } from './objectCategory.js';
+import { category } from "./objectCategory.js";
 
-const listCategory = category
+const listCategory = category;
 
-// --------------------------------Los mas populares------------------------------  //
+/* COMIENZO DE LOGICA DE RENDERS, SELECTORES DE PARAMETROS Y LLAMADOS DE DOM */
+console.log("lista categoria", listCategory);
 
-const popuContainer = document.getElementById('popu-container')
+/* Llamados a elementos del DOM */
+const filterButtons = document.querySelectorAll(".btn");
+const containerCategories = document.querySelector(".container__categories");
+const cardsContainer = document.querySelector(".popu-card-container");
+const categoryContainers = document.querySelectorAll(".category");
+const categoryTitle = document.querySelector(".container__categoty--title");
 
-const filtraPopulares = (arrayComida) => {
-    arrayComida.map(comida => {
-        if (comida.seccion === 'populares') {
-            const populares = comida.lista
-            renderCards(populares)
-        }
-    })
-}
+/* -------------------Funciones seccion categorias------------------- */
+/* Funcion que encuentra la categoria actual y llama a la funcion renderizadora*/
 
-const renderCards = (popuArray) => {
-    popuArray.map(p => popuCard(p))
-}
+/* Controlador de categoria */
+const categoryController = {
+  searchCategory: "populares",
+};
 
-const popuCard = (popuList) => {
-    const { nombre, comentario, img, precio } = popuList
+/* Funcion que cambia la propiedad de en el controlador de categoria */
+const selectorParameter = (category) => {
+  return (categoryController.searchCategory = category);
+};
 
-    return popuContainer.innerHTML += `
-            <div class="popu-card">
-                <div class="popu-img-container">
-                    <img src=${img} alt="Imagen de comida" />
-                </div>
-                <h3 class="popu-name">${nombre}</h3>
-                <h3 class="popu-eslogan">${comentario}</h3>
-                <div class="popu-precio-btn-container">
-                    <h2 class="popu-precio">$ ${precio}</h2>
-                    <button class="popu-btn">Agregar</button>
-                </div>
-            </div>
-        `
-}
+/* Funcion que cambia la categoria en base a botones y cambia tambien las clases de los botones */
+const changeCategory = (e) => {
+  if (!e.target.classList.contains("btn")) return;
+  const btnSelected = e.target.dataset.categorie;
+  selectorParameter(btnSelected);
+  const buttons = [...filterButtons];
+  const categoryActive = [...categoryContainers];
 
-filtraPopulares(listCategory)
+  let setDATA = [];
 
-// -------------------------------------------------------------------------------  //
+  buttons.forEach((btn) => {
+    const datasetName = btn.dataset.categorie;
+    const datasetBtn = btn.dataset.categorie !== btnSelected;
+    setDATA.push({ datasetName, datasetBtn });
+  });
 
+  const findFalse = setDATA.find((e) => e.datasetBtn == false);
+
+  categoryActive.forEach((cat) => {
+    const datasetFilter = cat.dataset.filter;
+    if (datasetFilter != findFalse.datasetName) {
+      cat.classList.remove("category__active");
+    } else {
+      cat.classList.add("category__active");
+    }
+  });
+  console.log(setDATA);
+};
+
+console.log("controlador de categoria:", categoryController);
+
+/* Contenedor del render */
+const renderCard = (lista) => {
+  const { nombre, img, comentario, precio } = lista;
+  return `
+  <div class="popu-card">
+  <div class="popu-img-container" style="background-image: url(${img})" alt="${nombre}">
+  </div>
+  <h3 class="popu-name">${nombre}</h3>
+  <h3 class="popu-eslogan">${comentario}n</h3>
+  <div class="popu-precio-btn-container">
+  <h2 class="popu-precio">$${precio}</h2>
+  <button class="popu-btn">Agregar</button>
+  </div>
+  </div>
+  `;
+};
+
+/* Funcion renderizadora */
+const renderCards = (lista) => {
+  cardsContainer.innerHTML = lista.map((comida) => renderCard(comida)).join("");
+};
+
+/* Funcion que llama a la funcion que contiene la logica de los botones, y encuentra  */
+const getCategory = () => {
+  const findCategory = () => {
+    const categoryFind = listCategory.find((e) => e.seccion == categoryController.searchCategory);
+    return categoryFind.lista;
+  };
+  return renderCards(findCategory());
+};
+
+/* Funcion renderizadora */
+const renderTitle = (title) => {
+  return (categoryTitle.innerHTML = `<h2 class="popu-title">${title}</h2>`);
+};
+
+/* Funcion que captura el la categoria actual mediante un Find  */
+const getCategoryTitle = () => {
+  const findCategory = listCategory.find((e) => e.seccion == categoryController.searchCategory);
+  return renderTitle(findCategory.seccion);
+};
+console.log("getCategoryTitle:", getCategoryTitle());
+
+const init = () => {
+  window.addEventListener("DOMContentLoaded", getCategory);
+  window.addEventListener("DOMContentLoaded", getCategoryTitle);
+  containerCategories.addEventListener("click", changeCategory);
+  containerCategories.addEventListener("click", getCategory);
+  containerCategories.addEventListener("click", getCategoryTitle);
+};
+init();

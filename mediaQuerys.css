@@ -1,0 +1,33 @@
+/* Iphone 5/SE */
+@media screen and (max-width: 320px) {
+}
+
+/* Iphone 12/13 Pro */
+@media screen and (max-width: 390px) {
+}
+
+/* Ipad Mini */
+@media screen and (max-width: 768px) {
+  .categories__title {
+    text-align: center;
+  }
+  .popu-title {
+    text-align: center;
+  }
+}
+
+/* Ipad Pro */
+@media screen and (max-width: 1024px) {
+}
+
+/* MacBook Air */
+@media screen and (max-width: 1440px) {
+}
+
+/* MacBook Pro 16" */
+@media screen and (max-width: 3072px) {
+}
+
+/* 4k Display */
+@media screen and (max-width: 3840px) {
+}
