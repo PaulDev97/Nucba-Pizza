@@ -299,6 +299,7 @@ button:hover {
   width: 237px;
   height: 97px;
   border-radius: 16px;
+  object-fit: cover;
 }
 
 .popu-name {
@@ -334,7 +335,17 @@ button:hover {
   border-style: none;
   border-radius: 17.5px;
   padding: 0.4rem 0.8rem;
+  cursor: pointer;
   color: #fff;
   background: linear-gradient(98.81deg, #ffa100 -0.82%, #ff005c 101.53%);
+  transition: 0.2s;
+}
+
+.popu-btn:hover {
+  background: linear-gradient(98.81deg, #ff005c -0.82%, #ffa100 101.53%);
+}
+
+.popu-btn:active {
+  transform: scale(0.9);
 }
 /*----------------------------------------------------------------------*/

@@ -107,6 +107,3 @@ const init = () => {
   containerCategories.addEventListener("click", getCategoryTitle);
 };
 init();
-
-/* Cambiar parametro por defecto a populares */
-/* Unir css de renders */
