@@ -6,49 +6,49 @@ export const category = [
       {
         nombre: "Asesina",
         comentario: "Aniquilá tu hambre",
-        img: './img/populares/asesina.jpg',
+        img: './assets/img/populares/asesina.jpg',
         precio: 800
       },
       {
         nombre: "Completa",
         comentario: "Que no te falte nada",
-        img: './img/populares/completa.jpg',
+        img: './assets/img/populares/completa.jpg',
         precio: 800
       },
       {
         nombre: "Turín",
         comentario: "Tesoro histórico",
-        img: './img/populares/turin.jpg',
+        img: './assets/img/populares/turin.jpg',
         precio: 800
       },
       {
         nombre: "Verona",
         comentario: "La mas romántica",
-        img: './img/populares/verona.jpg',
+        img: './assets/img/populares/verona.jpg',
         precio: 800
       },
       {
         nombre: "Carne en cubos",
         comentario: "El clásico",
-        img: './img/populares/wrap-carneEnCubos.jpeg',
+        img: './assets/img/populares/wrap-carneEnCubos.jpeg',
         precio: 800
       },
       {
         nombre: "Carne de cerdo y verduras",
         comentario: "Algo distinto",
-        img: './img/populares/wrap-cerdo.jpg',
+        img: './assets/img/populares/wrap-cerdo.jpg',
         precio: 800
       },
       {
         nombre: "Tacos dorados de pollo",
         comentario: "Tortilla frita y adornados con crema",
-        img: './img/populares/mexicanFood-dorados.jpg',
+        img: './assets/img/populares/mexicanFood-dorados.jpg',
         precio: 800
       },
       {
         nombre: "Batido dulce de leche",
         comentario: "Orgullo argentino",
-        img: './img/populares/dulce-de-leche.jpg',
+        img: './assets/img/populares/dulce-de-leche.jpg',
         precio: 800
       }
     ]
@@ -59,49 +59,49 @@ export const category = [
       {
         nombre: "Roma",
         comentario: "Sentite el César",
-        img: './img/pizzas/roma.jpg',
+        img: './assets/img/pizzas/roma.jpg',
         precio: 800
       },
       {
         nombre: "Nápoles",
         comentario: "La número 10",
-        img: './img/pizzas/napoles.jpg',
+        img: './assets/img/pizzas/napoles.jpg',
         precio: 900
       },
       {
         nombre: "Venecia",
         comentario: "Naufragio de sabor",
-        img: './img/pizzas/venecia.jpg',
+        img: './assets/img/pizzas/venecia.jpg',
         precio: 900
       },
       {
         nombre: "Milán",
         comentario: "La de moda",
-        img: './img/pizzas/milan.jpg',
+        img: './assets/img/pizzas/milan.jpg',
         precio: 950
       },
       {
         nombre: "Florencia",
         comentario: "Para el museo",
-        img: './img/pizzas/florencia.jpg',
+        img: './assets/img/pizzas/florencia.jpg',
         precio: 950
       },
       {
         nombre: "Turín",
         comentario: "Tesoro histórico",
-        img: './img/pizzas/turin.jpg',
+        img: './assets/img/pizzas/turin.jpg',
         precio: 1000
       },
       {
         nombre: "Verona",
         comentario: "La mas romántica",
-        img: './img/pizzas/verona.jpg',
+        img: './assets/img/pizzas/verona.jpg',
         precio: 1000
       },
       {
         nombre: "Génova",
         comentario: "Dejate conquistar",
-        img: './img/pizzas/genova.jpg',
+        img: './assets/img/pizzas/genova.jpg',
         precio: 1000
       }
     ]
@@ -112,49 +112,49 @@ export const category = [
       {
         nombre: "Simple",
         comentario: "Cuida tu bolsillo",
-        img: './img/hamburguesas/simple.jpg',
+        img: './assets/img/hamburguesas/simple.jpg',
         precio: 800
       },
       {
         nombre: "Nera",
         comentario: "La distinta",
-        img: './img/hamburguesas/nera.jpg',
+        img: './assets/img/hamburguesas/nera.jpg',
         precio: 900
       },
       {
         nombre: "Pollo",
         comentario: "El sabor que necesitabas",
-        img: './img/hamburguesas/pollo.jpg',
+        img: './assets/img/hamburguesas/pollo.jpg',
         precio: 900
       },
       {
         nombre: "Paltosa",
         comentario: "México estaría orgulloso",
-        img: './img/hamburguesas/paltosa.jpg',
+        img: './assets/img/hamburguesas/paltosa.jpg',
         precio: 950
       },
       {
         nombre: "Cebollita",
         comentario: "Justo en la infancia",
-        img: './img/hamburguesas/cebollita.jpg',
+        img: './assets/img/hamburguesas/cebollita.jpg',
         precio: 950
       },
       {
         nombre: "Completa",
         comentario: "Que no te falte nada",
-        img: './img/hamburguesas/completa.jpg',
+        img: './assets/img/hamburguesas/completa.jpg',
         precio: 1000
       },
       {
         nombre: "Pepino",
         comentario: "Mejor que la Big-mac",
-        img: './img/hamburguesas/pepino.jpg',
+        img: './assets/img/hamburguesas/pepino.jpg',
         precio: 1000
       },
       {
         nombre: "Asesina",
         comentario: "Aniquilá tu hambre",
-        img: './img/hamburguesas/asesina.jpg',
+        img: './assets/img/hamburguesas/asesina.jpg',
         precio: 1000
       }
     ]
