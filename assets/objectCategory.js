@@ -1,8 +1,6 @@
-export const category = [
-  {
+export const category = [{
     seccion: "populares",
-    lista: [
-      {
+    lista: [{
         nombre: "Batido dulce de leche",
         comentario: "Orgullo argentino",
         img: "./assets/img/dulce-de-leche.jpg",
@@ -55,8 +53,7 @@ export const category = [
 
   {
     seccion: "pizzas",
-    lista: [
-      {
+    lista: [{
         nombre: "",
         comentario: "",
         img: "img/.jpg",
@@ -108,107 +105,105 @@ export const category = [
   },
 
   {
-    seccion:"hamburguesas",
-    lista:[
-      {
-        nombre:"Hamburguesa Clásica",
-        comentario:"No falla",
-        img:'img/hamburguesa-clasica.jpg',
-        precio:80
+    seccion: "hamburguesas",
+    lista: [{
+        nombre: "Hamburguesa Clásica",
+        comentario: "No falla",
+        img: './assets/img/burgers-imgs/hamburguesa-clasica.jpg',
+        precio: 80
       },
       {
-        nombre:"Chicken burguer",
-        comentario:"Completa",
-        img:'img/hamburguesa-pollo.jpeg',
-        precio:80
+        nombre: "Chicken burguer",
+        comentario: "Completa",
+        img: './assets/img/burgers-imgs/hamburguesa-pollo.jpeg',
+        precio: 80
       },
       {
-        nombre:"Hamburguesa de panceta",
-        comentario:"Onion & Bacon",
-        img:'img/hamburguesa-panceta.jpg',
-        precio:80
+        nombre: "Hamburguesa de panceta",
+        comentario: "Onion & Bacon",
+        img: './assets/img/burgers-imgs/hamburguesa-panceta.jpg',
+        precio: 80
       },
       {
-        nombre:"Hamburguesa Vegetariana",
-        comentario:"Explosión de sabores",
-        img:'img/hamburguesa-vegetariana.jpg',
-        precio:80
+        nombre: "Hamburguesa Vegetariana",
+        comentario: "Explosión de sabores",
+        img: './assets/img/burgers-imgs/hamburguesa-vegetariana.jpg',
+        precio: 80
       },
       {
-        nombre:"Hamburguesa Criolla",
-        comentario:"Clásica salsa criolla",
-        img:'img/criolla-especial.jpg',
-        precio:80
+        nombre: "Hamburguesa Criolla",
+        comentario: "Clásica salsa criolla",
+        img: './assets/img/burgers-imgs/criolla-especial.jpg',
+        precio: 80
       },
       {
-        nombre:"Hamburguesa Doble carne",
-        comentario:"Antiácido incluído",
-        img:'img/doble-carne.jpg',
-        precio:80
+        nombre: "Hamburguesa Doble carne",
+        comentario: "Antiácido incluído",
+        img: './assets/img/burgers-imgs/doble-carne.jpg',
+        precio: 80
       },
       {
-        nombre:"Hamburguesa Doble queso",
-        comentario:"Cheddar+cheddar",
-        img:'img/doble-cheddar.jpg',
-        precio:80
+        nombre: "Hamburguesa Doble queso",
+        comentario: "Cheddar+cheddar",
+        img: './assets/img/burgers-imgs/doble-cheddar.jpg',
+        precio: 80
       },
       {
-        nombre:"Blacky bread Burguer",
-        comentario:"All-Black",
-        img:'img/hamburguesa-negra.jpg',
-        precio:80
+        nombre: "Blacky bread Burguer",
+        comentario: "All-Black",
+        img: './assets/img/burgers-imgs/hamburguesa-negra.jpg',
+        precio: 80
       }
     ]
   },
   {
     seccion: "papas fritas",
-    lista: [
+    lista: [{
+        nombre: "Papas clásicas",
+        comentario: "Van bien con todo",
+        img: "./assets/img/fries-imgs/.jpg",
+        precio: 80,
+      },
       {
-        nombre: "",
+        nombre: "Papas rancheras",
         comentario: "",
-        img: "img/.jpg",
+        img: "./assets/img/fries-imgs/.jpg",
+        precio: 80,
+      },
+      {
+        nombre: "Papas extra queso",
+        comentario: "",
+        img: "./assets/img/fries-imgs/.jpg",
         precio: 80,
       },
       {
         nombre: "",
         comentario: "",
-        img: "img/.jpg",
+        img: "./assets/img/fries-imgs/.jpg",
         precio: 80,
       },
       {
         nombre: "",
         comentario: "",
-        img: "img/.jpg",
+        img: "./assets/img/fries-imgs/.jpg",
         precio: 80,
       },
       {
         nombre: "",
         comentario: "",
-        img: "img/.jpg",
+        img: "./assets/img/fries-imgs/.jpg",
         precio: 80,
       },
       {
         nombre: "",
         comentario: "",
-        img: "img/.jpg",
+        img: "assets/img/fries-imgs/.jpg",
         precio: 80,
       },
       {
         nombre: "",
         comentario: "",
-        img: "img/.jpg",
-        precio: 80,
-      },
-      {
-        nombre: "",
-        comentario: "",
-        img: "img/.jpg",
-        precio: 80,
-      },
-      {
-        nombre: "",
-        comentario: "",
-        img: "img/.jpg",
+        img: "assets/img/fries-imgs/.jpg",
         precio: 80,
       },
     ],
@@ -216,8 +211,7 @@ export const category = [
 
   {
     seccion: "wraps",
-    lista: [
-      {
+    lista: [{
         nombre: "Vegetariano",
         comentario: "Muy saludable",
         img: "./assets/img/wraps-imgs/wrap-vegetariano.jpg",
@@ -270,8 +264,7 @@ export const category = [
 
   {
     seccion: "mexican food",
-    lista: [
-      {
+    lista: [{
         nombre: "Tacos al pastor",
         comentario: "Carne marinada y suave",
         img: "./assets/img/mexicanFood-imgs/mexicanFood-alPastor.jpg",
@@ -324,8 +317,7 @@ export const category = [
 
   {
     seccion: "batidos",
-    lista: [
-      {
+    lista: [{
         nombre: "Fresa y platano",
         comentario: "Combinacion dulce",
         img: "./assets/img/fresa-platano.jpg",
