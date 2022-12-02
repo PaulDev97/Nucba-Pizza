@@ -3,6 +3,11 @@
  
   /* Main */
 
+  body .main-container {
+    height: 400px;
+    
+  }
+
   .slogan-container {
     width: 40%;
     display: flex;
@@ -36,7 +41,7 @@
   .main-container .slogan-container button {
     width: 60px;
     margin-top: 10px;
-    padding: none;
+    padding: 5px;
     border-radius: 10px;
     border: none;
     cursor: pointer;
@@ -58,36 +63,59 @@
   
   /* --------------Final main--------------------- */
 
-  .reco_container .card  button {
-    font-size: 10px;
-  }
-  
-  .card .img_reco_container {
-    width: 200px;
-    height: 70px;
-    
+  .reco_container .reco {
     display: flex;
-    justify-content: none;
-    align-items: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
-  .reco_container .info-card h3 {
+
+  body .reco_container .reco .list-reco .card {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  body .reco_container .reco h2 {
+    font-size: 14px;
+  }
+  .list-reco .card .info-card h3 {
     font-size: 12px;
   }
 
-  .reco_container .info-card :nth-child(2) {
+  .list-reco .card .info-card :nth-child(2) {
     font-size: 10px;
   }
 
-  .reco_container .info-card :nth-child(3) {
+  .list-reco .card .info-card :nth-child(3) {
     font-size: 12px;
   }
 
-  .reco_container .reco h2 {
+  .list-reco .card .reco h2 {
     font-size: 14px;
   }
 
+  .reco_container .reco .list-reco .card button {
+    font-size: 12px;
+  }
   
+.reco_container .reco .list-reco .card .img_reco_container {
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  .list-reco .card .img_reco_container img {
+    width: 100%;
+    height: 100%;
+    
+  }
 
   /* ------Fin de Recomendados----- */
 
@@ -116,11 +144,11 @@
 
 }
 
-.categories__title {
+.data_category .categories__title {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  font-size: 18px;
 }
 
 /* Divs contenedor de categorias de comidas */
@@ -167,6 +195,7 @@ button:hover {
 
 /* Titulo categoria */
 .container__categories .category span {
+
   font-weight: 500;
   font-size: 10px;
   color: #fff;
@@ -180,7 +209,8 @@ button:hover {
   filter: drop-shadow(0px 0px 2px #ffffff);
   -webkit-filter: drop-shadow(0px 0px 2px #ffffff);
 }
-.category__rectangle {
+
+.category .category__rectangle {
   width: 24px;
   height: 4px;
   background: linear-gradient(98.81deg, #ffa100 -0.82%, #ff005c 101.53%);
@@ -241,7 +271,7 @@ button:hover {
   gap: 15px;
 }
 
-.popu-card-container .popu-card {
+.data_popu .popu-card-container .popu-card {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -254,9 +284,9 @@ button:hover {
   padding: 5px;
 }
 
-.popu-card .popu-img-container {
-  width: 100%;
-  height: 100px;
+.popu-card-container .popu-card .popu-img-container {
+  width: 90%;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -302,7 +332,7 @@ button:hover {
   padding: 2px;
 }
 
-.popu-precio {
+.popu-precio-btn-container .popu-precio {
   font-weight: 700;
   font-size: 14px;
   background: linear-gradient(98.81deg, #ffa100 -0.82%, #ff005c 101.53%);
@@ -311,7 +341,7 @@ button:hover {
   -webkit-text-fill-color: transparent;
 }
 
-.popu-btn {
+.popu-precio-btn-container .popu-btn {
   font-weight: 600;
   font-size: 10px;
   border-style: none;
@@ -327,56 +357,60 @@ button:hover {
 
   /* Main */
 
-  .main-container {
+  body .main-container {
     height: 420px;
   }
-  .slogan-container {
+  
+  .main-container .slogan-container {
     width: 40%;
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
   
-  .img_container {
+  .main-container  .img_container {
     width: 50%;
     display: flex;
     justify-content: center;
     
   }
   
-  .slogan-container h2 {
+  .main-container .slogan-container h2 {
     color: white;
     font-size: 20px;
     word-spacing: 2px;
   }
   
-  .slogan-container span {
+  .main-container .slogan-container span {
     font-size: 14px;
     word-spacing: 2px;
   }
   
-  .slogan-container p {
+  .main-container  .slogan-container p {
     font-size: 12px;
     color: gray;
   }
   
-  .slogan-container button {
-    width: 90px;
+  .main-container .slogan-container button {
+    width: 80px;
     margin-top: 10px;
-    padding: 5px 0;
+    padding: 5px;
     border-radius: 10px;
     cursor: pointer;
+    font-size: 12px;
+    font-weight: 400;
     background: linear-gradient(to right, #ffa100, #fb103d);
+    color: white;
   }
 
   
-  .img_container :nth-child(1) {
+  .main-container .img_container :nth-child(1) {
     width: 45%;
     height: 200px;
     transform: rotateY(200deg);
   }
   
-  .img_container :nth-child(2) {
+  .main-container  .img_container :nth-child(2) {
     width: 60%;
     height: 200px;
   }
@@ -388,19 +422,19 @@ button:hover {
 
   
 
-  .reco {
+  .reco_container .reco {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  .reco h2 {
+  body .reco_container .reco h2 {
     color: white;
-    font-size: 16px;
+    font-size: 14px;
   }
 
-  .list-reco {
+   .reco_container .list-reco {
     width: 100%;
     display: flex;
     gap: 14px;
@@ -408,7 +442,7 @@ button:hover {
    
   }
 
-  .list-reco .card {
+  .reco_container .list-reco .card {
       width: 270px;
       height: 90px;
       display: flex;
@@ -420,40 +454,41 @@ button:hover {
       gap: 5px;
   }
 
-  .info-card {
+  .reco_container .list-reco .info-card {
     display: flex;
     flex-direction: column;
     gap: 4px;
   }
   
-  .img_reco_container {
-    width: 20%;
-    height: 20px;
+  .reco_container .reco .list-reco .card .img_reco_container {
+    width: 100%;
+    height: 100%;
+    margin-top: 0px;
     
   }
   
-  .img_reco_container img {
+  .list-reco .card .img_reco_container img {
     width: 100%;
     height: 100%;
     border-radius: 10px;
   }
   
-  .info-card h3 {
+  .list-reco .card .info-card h3 {
     color: white;
     font-size: 14px;
   }
   
-  .info-card :nth-child(2) {
+  .list-reco .card .info-card :nth-child(2) {
     color: gray;
     font-size: 12px;
   }
   
-  .info-card :nth-child(3) {
+  .list-reco .card .info-card :nth-child(3) {
     color: #ffa100;
     font-size: 13px;
   }
   
-  .list-reco button {
+  .reco_container .reco .list-reco .card button {
     font-size: 12px;
   }
 
@@ -483,11 +518,11 @@ button:hover {
 
   }
   
-  .categories__title {
+  .data_category .categories__title {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    font-size: 18px;
   }
   
   /* Divs contenedor de categorias de comidas */
@@ -533,7 +568,7 @@ button:hover {
   }
   
   /* Titulo categoria */
-  .category span {
+  .container__categories .category span {
     font-weight: 500;
     font-size: 12px;
     color: #fff;
@@ -547,8 +582,8 @@ button:hover {
     filter: drop-shadow(0px 0px 2px #ffffff);
     -webkit-filter: drop-shadow(0px 0px 2px #ffffff);
   }
-  .category__rectangle {
-    width: 24px;
+  .category .category__rectangle {
+    width: 20px;
     height: 4px;
     background: linear-gradient(98.81deg, #ffa100 -0.82%, #ff005c 101.53%);
     box-shadow: 0px 0px 50px rgba(1, 2, 7, 0.5);
@@ -572,9 +607,10 @@ button:hover {
 }
 
 
-.container__categoty--title {
+ .container__categoty--title {
   display: flex ;
   justify-content: flex-start;
+  font-size: 16px;
 }
 
 .popu {
@@ -586,11 +622,12 @@ button:hover {
   margin: 4rem auto;
 }
 
-.popu-title {
+.container__categoty--title .popu-title {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 20px;
 }
 
 .popu-card-container {
@@ -604,7 +641,7 @@ button:hover {
   gap: 15px;
 }
 
-.popu-card {
+.popu-card-container .popu-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -619,7 +656,7 @@ button:hover {
   padding: 5px;
 }
 
-.popu-card .popu-img-container {
+.popu-card-container .popu-card .popu-img-container {
   width: 100%;
   height: 100px;
   display: flex;
@@ -630,7 +667,7 @@ button:hover {
   
 }
 
-.popu-img-container img {
+.popu-card-container .popu-card .popu-img-container img {
   width: 90%;
   height: 100%;
   border-radius: 16px;
@@ -638,7 +675,7 @@ button:hover {
   
 }
 
-.popu-name {
+.popu-card .popu-name {
   font-weight: 0;
   font-size: 12px;
   color: #fff;
@@ -667,7 +704,7 @@ button:hover {
   padding: 2px;
 }
 
-.popu-precio {
+.popu-precio-btn-container .popu-precio {
   font-weight: 700;
   font-size: 14px;
   background: linear-gradient(98.81deg, #ffa100 -0.82%, #ff005c 101.53%);
@@ -676,7 +713,7 @@ button:hover {
   -webkit-text-fill-color: transparent;
 }
 
-.popu-btn {
+.popu-precio-btn-container .popu-btn {
   font-weight: 600;
   font-size: 10px;
   border-style: none;
@@ -696,26 +733,49 @@ button:hover {
 /* Ipad Mini */
 @media screen and (max-width: 768px) {
 
+
   /* Recomendados cards */
-  .card {
-    width: 160px;
+  .reco_container .reco {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+  }
+
+
+  .reco_container .reco h2 {
+    color: white;
+    font-size: 30px;
+  }
+
+  
+  .list-reco .card {
+    width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border-radius: 10px;
     background-color: #252525;
     
     box-shadow: 2px 5px 10px #000;
-    gap: 5px;
+    gap: 10px;
   }
 
-  .img_reco_container {
-    width: 80%;
-    height: 80px;
-    padding: 5px;
+  .list-reco .card .img_reco_container {
+    width: 90%;
+    height: 150px;
+    margin-top: 14px;
+    
   }
 
-  .info-card {
+  .card .img_reco_container img {
+    width: 100%;
+    height: 100%;
+  }
+
+   .card .info-card {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -724,8 +784,23 @@ button:hover {
    
   }
 
-  .list-reco button {
-    margin-top: 5px;
+  .card .info-card h3 {
+    color: white;
+    font-size: 30px;
+  }
+  
+  .card .info-card :nth-child(2) {
+    color: gray;
+    font-size: 20px;
+  }
+  
+  .card .info-card :nth-child(3) {
+    color: #ffa100;
+    font-size: 25px;
+  }
+  
+  .reco_container .list-reco .card button {
+    font-size: 22px;
   }
   /* ------Fin Seccion Recomendados-------*/
 
