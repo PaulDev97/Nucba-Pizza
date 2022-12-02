@@ -64,7 +64,7 @@ const renderCard = (lista) => {
    <div class="popu-img-container"> <img src="${img}"></img>
   </div>
   <h3 class="popu-name">${nombre}</h3>
-  <h3 class="popu-eslogan">${comentario}n</h3>
+  <h3 class="popu-eslogan">${comentario}</h3>
   <div class="popu-precio-btn-container">
   <h2 class="popu-precio">$${precio}</h2>
   <button class="popu-btn" data-id:"${id}" data-name:"${nombre}" data-precio="${precio}"  >Agregar</button>
@@ -117,6 +117,3 @@ const init = () => {
  
 };
 init();
-
-/* Cambiar parametro por defecto a populares */
-/* Unir css de renders */
