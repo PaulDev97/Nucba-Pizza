@@ -58,16 +58,16 @@ console.log("controlador de categoria:", categoryController);
 
 /* Contenedor del render */
 const renderCard = (lista) => {
-  const { nombre, img, comentario, precio } = lista;
+  const {id, nombre, img, comentario, precio } = lista;
   return `
   <div class="popu-card">
-  <div class="popu-img-container" style="background-image: url(${img})" alt="${nombre}">
+   <div class="popu-img-container"> <img src="${img}"></img>
   </div>
   <h3 class="popu-name">${nombre}</h3>
   <h3 class="popu-eslogan">${comentario}</h3>
   <div class="popu-precio-btn-container">
   <h2 class="popu-precio">$${precio}</h2>
-  <button class="popu-btn">Agregar</button>
+  <button class="popu-btn" data-id:"${id}" data-name:"${nombre}" data-precio="${precio}"  >Agregar</button>
   </div>
   </div>
   `;
@@ -99,11 +99,21 @@ const getCategoryTitle = () => {
 };
 console.log("getCategoryTitle:", getCategoryTitle());
 
+
+
+
+
+
+
+
+
 const init = () => {
   window.addEventListener("DOMContentLoaded", getCategory);
   window.addEventListener("DOMContentLoaded", getCategoryTitle);
   containerCategories.addEventListener("click", changeCategory);
   containerCategories.addEventListener("click", getCategory);
   containerCategories.addEventListener("click", getCategoryTitle);
+
+ 
 };
 init();
