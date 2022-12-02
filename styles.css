@@ -373,3 +373,27 @@ button:hover {
   background: linear-gradient(98.81deg, #ffa100 -0.82%, #ff005c 101.53%);
 }
 /*----------------------------------------------------------------------*/
+
+/* --------------Ejemplo carrito------------ */
+.carrito {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  gap: 50px;
+}
+
+.flex {
+  display: flex;
+  gap: 10px;
+}
+
+.total_prod{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+

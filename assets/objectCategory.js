@@ -3,6 +3,7 @@ export const category = [
     seccion: "populares",
     lista: [
       {
+        
         nombre: "Batido dulce de leche",
         comentario: "Orgullo argentino",
         img: "./assets/img/dulce-de-leche.jpg",
@@ -327,48 +328,56 @@ export const category = [
     seccion: "batidos",
     lista: [
       {
+        id:50,
         nombre: "Fresa y platano",
         comentario: "Combinacion dulce",
         img: "./assets/img/fresa-platano.jpg",
         precio: 300,
       },
       {
+        id:51,
         nombre: "Tres frutos rojos",
         comentario: "Aguante el rojo",
         img: "./assets/img/frutos-rojos.jpg",
         precio: 80,
       },
       {
+        id:52,
         nombre: "Batido Tropical",
         comentario: "Suave",
         img: "./assets/img/tropical.jpg",
         precio: 150,
       },
       {
+        id:53,
         nombre: "Batido de mango",
         comentario: "Welinton campeón",
         img: "./assets/img/mango.jpg",
         precio: 400,
       },
       {
+        id:54,
         nombre: "Chocolate con helado",
         comentario: "Clasico",
         img: "./assets/img/chocolate-helado.jpg",
         precio: 250,
       },
       {
+        id:55,
         nombre: "Batido de nutella",
         comentario: "Amante del sabor",
         img: "./assets/img/nutella.jpg",
         precio: 100,
       },
       {
+        id:56,
         nombre: "Chocolate vegano",
         comentario: "Sabor unico",
         img: "./assets/img/vegano.jpg",
         precio: 60,
       },
       {
+        id:57,
         nombre: "Batido dulce de leche",
         comentario: "Orgullo argentino",
         img: "./assets/img/dulce-de-leche.jpg",
