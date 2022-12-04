@@ -20,6 +20,10 @@ const containerCartCards = document.querySelector(".container__products--cart");
 const totalCart = document.querySelector(".cart__total");
 const bubbleCountCart = document.querySelector(".cart__bubble--count");
 
+
+
+
+
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 const saveToLocalStorage = (key) => {
   localStorage.setItem("cart", JSON.stringify(key));
@@ -71,7 +75,7 @@ console.log("controlador de categoria:", categoryController);
 
 /* Contenedor del render */
 const renderCard = (lista) => {
-  const { nombre, img, comentario, precio } = lista;
+  const { nombre, img, comentario, precio, id } = lista;
   return `
   <div class="popu-card">
     <div class="popu-img-container" style="background-image: url(${img})" alt="${nombre}"></div>
@@ -79,7 +83,7 @@ const renderCard = (lista) => {
     <h3 class="popu-eslogan">${comentario}</h3>
     <div class="popu-precio-btn-container">
       <h2 class="popu-precio">$${precio}</h2>
-      <button class="popu-btn" data-nombre="${nombre}" data-precio="${precio}" data-comentario="${comentario}" data-img="${img}">
+      <button class="popu-btn" data-nombre="${nombre}" data-precio="${precio}" data-comentario="${comentario}" data-img="${img}" data-id="${id}">
         Agregar
       </button>
     </div>
@@ -121,7 +125,7 @@ const toggleMenu = () => {
 
 /* Render card cart */
 const renderProductCart = (product) => {
-  const { nombre, img, comentario, precio, cantidad } = product;
+  const { nombre, img, comentario, precio, cantidad, id } = product;
   return `  <div class="render__products--cart">
               <div class="image__container--cart" style="background-image: url(${img})"></div>
               <div class="info__card--cart">
@@ -131,11 +135,11 @@ const renderProductCart = (product) => {
               </div>
               <div class="amountSettings__card--cart">
                 <div class="container__minusButton--cart">
-                  <button class="button__minus--cart" data-nombre=${nombre}>-</button>
+                  <button class="button__minus--cart" data-nombre=${nombre} data-id='${id}'>-</button>
                 </div>
                 <span class="amount__card">${cantidad}</span>
                 <div class="container__addButton--cart">
-                  <button class="button__add--cart" data-nombre=${nombre}>+</button>
+                  <button class="button__add--cart" data-nombre=${nombre} data-id='${id}'>+</button>
                 </div>
               </div>
             </div>
@@ -194,7 +198,7 @@ const btnDisable = (btn) => {
 const checkStateCart = () => {
   saveToLocalStorage(cart);
   renderCart(cart);
-  showTotal();
+  showTotal(cart);
   btnDisable(btnComprarCart);
   showBubbleCount(cart);
 };
@@ -202,13 +206,13 @@ const checkStateCart = () => {
 /* Funcion agregar producto al carrito */
 const addProductToCart = (e) => {
   if (!e.target.classList.contains("popu-btn")) return;
-  const { nombre, precio, comentario, img } = e.target.dataset;
+  const { nombre, precio, comentario, img, id } = e.target.dataset;
 
-  const setDataProduct = (nombre, precio, comentario, img) => {
-    return { nombre, precio, comentario, img };
+  const setDataProduct = (nombre, precio, comentario, img,id) => {
+    return { nombre, precio, comentario, img,id };
   };
 
-  const product = setDataProduct(nombre, precio, comentario, img);
+  const product = setDataProduct(nombre, precio, comentario, img, id);
 
   const existProduct = (element) => {
     console.log(element);
@@ -241,6 +245,82 @@ const addUnitProduct = (product) => {
   );
 };
 
+/* --------------------logica Botones ---------------------------- */
+
+
+//1-Checkear si apretamos boton - o +
+const handleQuantity = e => {
+  if(e.target.classList.contains('button__minus--cart')){
+    btnRestar(e.target.dataset.id)
+  }
+  else if (e.target.classList.contains('button__add--cart')){
+    btnSumar(e.target.dataset.id)
+  }
+  checkStateCart()
+   
+  
+}
+
+//2-- Funcion para manipular boton -
+const btnRestar = id => {
+  //buscamos en el carrito si ya existe ese producto
+  const existCardProduct = cart.find(item => item.id === id);
+
+  console.log(existCardProduct)
+ 
+  //Si hay solo 1 producto y el usuario apreta el -
+  if(existCardProduct.cantidad === 1){
+    if(window.confirm('Eliminar producto')){
+      //codigo funcion 16
+      removeCardProduct(existCardProduct)
+    }
+    return
+  }
+  //Si el if no se cumple entonces viene a esta funcion que le va a restar a la cantidad 1. Le pasamos como parametro el exist... encontrado
+  restarUnidadProducto(existCardProduct)
+
+  checkStateCart()
+}
+
+
+//3- Funcion para restar 1 unidad
+const restarUnidadProducto = existProduct => {
+  //mapeo del carrito para obtener el producto igual al que se le pasó a restarUnidadProducto.
+  //Si existe entonces hacemos una copia del producto y le decimos que ahora la cantidad de ese producto le restaremos 1 caso contrario solo retorna el producto
+  cart = cart.map(product => {
+    return product.id === existProduct.id
+    ?{...product, cantidad:Number(product.cantidad) - 1}
+    :product;
+  })
+}
+
+//4- funcion para eliminar producto del carrito
+const removeCardProduct = existProduct=> {
+  //Traeme todo los productos que sean diferentes al id 
+  cart = cart.filter(item => item.id !== existProduct.id)
+
+  //Actualizamos Local y eso lo borra del localStorage
+  checkStateCart()
+
+} 
+
+
+//5- Funcion cuando apretemos boton +
+const btnSumar = id => {
+  const existCardProduct = cart.find(item => item.id === id);
+
+  addUnitProduct(existCardProduct)
+
+}
+
+
+
+
+
+
+
+
+
 const init = () => {
   window.addEventListener("DOMContentLoaded", getCategory);
   window.addEventListener("DOMContentLoaded", getCategoryTitle);
@@ -254,6 +334,15 @@ const init = () => {
   window.addEventListener("DOMContentLoaded", showBubbleCount);
   window.addEventListener("DOMContentLoaded", btnDisable(btnComprarCart));
   cardsContainer.addEventListener("click", addProductToCart);
+
+
+  containerCartCards.addEventListener("click",handleQuantity)
+
+
 };
 
 init();
+
+
+
+

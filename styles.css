@@ -3,15 +3,410 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   background-color: #111;
   font-family: "Montserrat", sans-serif;
 }
+
+/* ----------Seccion del main-------- */
+.main-container {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+.slogan-container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.img_container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.slogan-container h2 {
+  color: white;
+  font-size: 40px;
+  word-spacing: 2px;
+}
+
+.slogan-container span {
+  font-size: 34px;
+  word-spacing: 2px;
+}
+
+.slogan-container p {
+  color: gray;
+}
+
+.slogan-container button {
+  width: 120px;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: linear-gradient(to right, #ffa100, #fb103d);
+}
+
+.img_container :nth-child(1) {
+  width: 50%;
+  height: 300px;
+  transform: rotateY(200deg);
+}
+
+.img_container :nth-child(2) {
+  width: 50%;
+  height: 300px;
+}
+
+/* ----------------------------------- */
+
+/* ------------Recomendados---------- */
+
+.reco_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.reco {
+  width: 90%;
+}
+
+.reco h2 {
+  color: white;
+  font-size: 18px;
+}
+
+.list-reco {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.card {
+  width: 270px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #252525;
+  padding: 8px;
+  box-shadow: 2px 5px 10px #000;
+  gap: 5px;
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.img_reco_container {
+  width: 30%;
+  height: 60px;
+}
+
+.img_reco_container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.info-card h3 {
+  color: white;
+  font-size: 16px;
+}
+
+.info-card :nth-child(2) {
+  color: gray;
+  font-size: 14px;
+}
+
+.info-card :nth-child(3) {
+  color: #ffa100;
+  font-size: 14px;
+}
+
+.list-reco button {
+  width: 60px;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: linear-gradient(to right, #ffa100, #fb103d);
+  border: none;
+  color: #fff;
+  text-shadow: -2px 3px 3px black;
+}
+
+/* ---------------------------------- */
+
+
+/* ---------------------------Section categorias--------------------------- */
+
+.data_category {
+  width: 90%;
+  margin-top: 80px;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+/* Container principal de categorias */
+.container__categories {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+
+}
+
+.categories__title {
+  color: #fff;
+  width: 75%;
+  text-align: left;
+  font-size: clamp(18px, 14px, 215px);
+  text-shadow: rgba(197, 197, 197, 0.811) 3px 4px 10px;
+}
+
+/* Divs contenedor de categorias de comidas */
+.category {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 112px;
+  height: 171px;
+  background-color: transparent;
+  border:1px solid  #252525;
+  gap: 20px;
+  background: #252525;
+  box-shadow: 0px 0px 50px rgba(1, 2, 7, 0.5);
+  border-radius: 15px;
+  transition: all 0.3s;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+/* Dimensiones del boton */
+.btn {
+  width: 112px;
+  height: 171px;
+  position: absolute;
+  background-color: transparent; 
+  border: none;
+  outline: none;
+}
+
+.category:hover {
+  border: 1px solid white;
+}
+
+
+button:hover {
+  cursor: pointer;
+}
+.category__active {
+  background: #4d4d4d;
+}
+
+/* Titulo categoria */
+.category span {
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+  line-height: 131.02%;
+}
+/* Estilo de icono categoria */
+.category img {
+  width: 80px;
+  height: 86px;
+  filter: drop-shadow(0px 0px 2px #ffffff);
+  -webkit-filter: drop-shadow(0px 0px 2px #ffffff);
+}
+.category__rectangle {
+  width: 24px;
+  height: 4px;
+  background: linear-gradient(98.81deg, #ffa100 -0.82%, #ff005c 101.53%);
+  box-shadow: 0px 0px 50px rgba(1, 2, 7, 0.5);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+/* ----------------------------Nombre de la seccion---------------------------- */
+
+
+.data_popu {
+  width: 95%;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.container__categoty--title {
+  display: flex ;
+  justify-content: flex-start;
+}
+
+.popu {
+  display: flex;
+  flex-direction: column;
+  
+  max-width: 90rem;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 4rem auto;
+}
+
+.popu-title {
+  
+  font-weight: 500;
+  /* padding: 0.5rem 3.5rem; */
+  font-size: 22px;
+  color: #fff;
+}
+
+.popu-card-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+  /* margin: auto 1rem; */
+  max-width: 100%;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+.popu-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  width: 282px;
+  height: 245px;
+  border-radius: 15px;
+  background-color: #252525;
+}
+
+.popu-img-container {
+  width: 237px;
+  height: 100%;
+  border-radius: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  display: flex;
+}
+
+.popu-img-container img {
+  width: 237px;
+  height: 97px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.popu-name {
+  font-weight: 500;
+  font-size: 15px;
+  color: #fff;
+}
+
+.popu-eslogan {
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  opacity: 0.3;
+}
+
+.popu-precio-btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popu-precio {
+  font-weight: 700;
+  font-size: 19px;
+  background: linear-gradient(98.81deg, #ffa100 -0.82%, #ff005c 101.53%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.popu-btn {
+  font-weight: 600;
+  font-size: 12px;
+  border-style: none;
+  border-radius: 17.5px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(98.81deg, #ffa100 -0.82%, #ff005c 101.53%);
+  transition: 0.2s;
+}
+
+.popu-btn:hover {
+  background: linear-gradient(98.81deg, #ff005c -0.82%, #ffa100 101.53%);
+}
+
+.popu-btn:active {
+  transform: scale(0.9);
+}
+/*----------------------------------------------------------------------*/
+
+/* --------------Ejemplo carrito------------ */
+/* .carrito {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  gap: 50px;
+}
+
+.flex {
+  display: flex;
+  gap: 10px;
+}
+
+.total_prod{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+} */
 
 /* EMPIEZA HEADER, NAVBAR, Y CARRITO ESTILOS */
 header {
@@ -352,333 +747,3 @@ span {
 }
 /* ----------------------------------- */
 
-/* ----------Seccion del main-------- */
-.main-container {
-  width: 100%;
-  height: 500px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.slogan-container {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.img_container {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-}
-
-.slogan-container h2 {
-  color: white;
-  font-size: 40px;
-  word-spacing: 2px;
-}
-
-.slogan-container span {
-  font-size: 34px;
-  word-spacing: 2px;
-}
-
-.slogan-container p {
-  color: gray;
-}
-
-.slogan-container button {
-  width: 120px;
-  margin-top: 10px;
-  padding: 10px;
-  border-radius: 10px;
-  cursor: pointer;
-  background: linear-gradient(to right, #ffa100, #fb103d);
-}
-
-.img_container :nth-child(1) {
-  width: 50%;
-  height: 300px;
-  transform: rotateY(200deg);
-}
-
-.img_container :nth-child(2) {
-  width: 50%;
-  height: 300px;
-}
-/* ----------------------------------- */
-
-/* ------------Recomendados---------- */
-
-.reco_container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.reco {
-  width: 90%;
-}
-
-.reco h2 {
-  color: white;
-  font-size: 18px;
-}
-
-.list-reco {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  gap: 10px;
-  margin-top: 12px;
-}
-
-.card {
-  width: 270px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  align-items: center;
-  border-radius: 10px;
-  background-color: #252525;
-  padding: 8px;
-  box-shadow: 2px 5px 10px #000;
-  gap: 5px;
-}
-
-.info-card {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.img_reco_container {
-  width: 30%;
-  height: 60px;
-}
-
-.img_reco_container img {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-}
-
-.info-card h3 {
-  color: white;
-  font-size: 16px;
-}
-
-.info-card :nth-child(2) {
-  color: gray;
-  font-size: 14px;
-}
-
-.info-card :nth-child(3) {
-  color: #ffa100;
-  font-size: 14px;
-}
-
-.list-reco button {
-  width: 60px;
-  padding: 5px;
-  border-radius: 10px;
-  background: linear-gradient(to right, #ffa100, #fb103d);
-  border: none;
-  color: #fff;
-  text-shadow: -2px 3px 3px black;
-}
-
-/* ---------------------------------- */
-
-/* ---------------------------Section categorias--------------------------- */
-.categorias {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  margin: 90px auto;
-}
-
-/* Container principal de categorias */
-.container__categories {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  gap: 35px;
-  flex-wrap: wrap;
-}
-
-.categories__title {
-  color: #fff;
-  width: 75%;
-  text-align: left;
-  font-size: clamp(25px, 40px, 75px);
-  text-shadow: rgba(197, 197, 197, 0.811) 3px 4px 10px;
-}
-
-/* Divs contenedor de categorias de comidas */
-.category {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 147px;
-  height: 171px;
-  background-color: transparent;
-  border: none;
-  gap: 20px;
-  background: #252525;
-  box-shadow: 0px 0px 50px rgba(1, 2, 7, 0.5);
-  border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
-}
-/* Dimensiones del boton */
-.btn {
-  width: 147px;
-  height: 171px;
-  position: absolute;
-  background-color: transparent;
-  border: none;
-  outline: none;
-}
-
-button:hover {
-  cursor: pointer;
-}
-
-.category__active {
-  background: #4d4d4d;
-}
-
-/* Titulo categoria */
-.category span {
-  font-weight: 400;
-  font-size: 16px;
-  color: #fff;
-  line-height: 131.02%;
-}
-/* Estilo de icono categoria */
-.category img {
-  width: 86px;
-  height: 86px;
-  filter: drop-shadow(0px 0px 2px #ffffff);
-  -webkit-filter: drop-shadow(0px 0px 2px #ffffff);
-}
-.category__rectangle {
-  width: 24px;
-  height: 4px;
-  background: linear-gradient(98.81deg, #ffa100 -0.82%, #ff005c 101.53%);
-  box-shadow: 0px 0px 50px rgba(1, 2, 7, 0.5);
-  border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
-}
-
-/* ----------------------------Nombre de la seccion---------------------------- */
-
-.popu {
-  display: flex;
-  flex-direction: column;
-  max-width: 90rem;
-  gap: 1rem;
-  padding: 1rem;
-  margin: 4rem auto;
-}
-
-.popu-title {
-  display: flex;
-  font-weight: 500;
-  padding: 0.5rem 3.5rem;
-  font-size: 22px;
-  color: #fff;
-}
-
-.popu-card-container {
-  display: flex;
-  justify-content: center;
-  margin: auto 1rem;
-  max-width: 100%;
-  flex-wrap: wrap;
-  gap: 2.5rem;
-}
-
-.popu-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 1.5rem;
-  width: 282px;
-  height: 245px;
-  border-radius: 15px;
-  background-color: #252525;
-}
-
-.popu-img-container {
-  width: 237px;
-  height: 100%;
-  border-radius: 16px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-clip: content-box;
-  display: flex;
-}
-
-.popu-img-container img {
-  width: 237px;
-  height: 97px;
-  border-radius: 16px;
-}
-
-.popu-name {
-  font-weight: 500;
-  font-size: 15px;
-  color: #fff;
-}
-
-.popu-eslogan {
-  font-weight: 400;
-  font-size: 14px;
-  color: #fff;
-  opacity: 0.3;
-}
-
-.popu-precio-btn-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.popu-precio {
-  font-weight: 700;
-  font-size: 19px;
-  background: linear-gradient(98.81deg, #ffa100 -0.82%, #ff005c 101.53%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.popu-btn {
-  font-weight: 600;
-  font-size: 12px;
-  border-style: none;
-  border-radius: 17.5px;
-  padding: 0.4rem 0.8rem;
-  color: #fff;
-  background: linear-gradient(98.81deg, #ffa100 -0.82%, #ff005c 101.53%);
-}
-/*----------------------------------------------------------------------*/
