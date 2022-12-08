@@ -6,14 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      rel="stylesheet"
+    />
     <title>Nucba Pizza</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="mediaQuerys.css" />
   </head>
   <body>
-
     <header>
       <a href="#categorias"
         ><svg
@@ -28,7 +33,10 @@
           <rect width="76" height="79" fill="url(#pattern0)" />
           <defs>
             <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-              <use xlink:href="#image0_1_154" transform="translate(-0.000951173) scale(0.00626189 0.0060241)" />
+              <use
+                xlink:href="#image0_1_154"
+                transform="translate(-0.000951173) scale(0.00626189 0.0060241)"
+              />
             </pattern>
             <image
               id="image0_1_154"
@@ -40,7 +48,9 @@
         </svg>
       </a>
       <nav>
-        <a href="#main" class="a__main--navbar"> <i class="fa-solid fa-house icon__house--navbar"></i>Home</a>
+        <a href="#main" class="a__main--navbar">
+          <i class="fa-solid fa-house icon__house--navbar"></i>Home</a
+        >
         <button type="button" class="btn-cart">
           <i class="fa-solid fa-cart-shopping icon__cart--navbar"></i>
           <div class="cart__bubble--count"></div>
@@ -62,11 +72,11 @@
         <div class="container__subYEnvio--cart">
           <div class="cart__subtotal">
             <span>Subtotal:</span>
-            <span>$4890</span>
+            <span class="subtotal__cart">$0</span>
           </div>
           <div class="cart__envio">
             <span>Envío:</span>
-            <span>Gratis</span>
+            <span class="envio__calc--cart">Gratis</span>
           </div>
         </div>
         <div class="line__divider"></div>
@@ -121,11 +131,7 @@
 
           <div class="card">
             <div class="img_reco_container">
-
               <img src="assets/img/mozzarella.jpg" alt="" />
-
-              
-
             </div>
             <div class="info-card">
               <h3>Pizza</h3>
@@ -140,93 +146,70 @@
 
     <!---------------------- Comienza CATEGORIAS ------------------------>
     <section class="reco_container categorias">
-      <div class="data_category ">
+      <div class="data_category">
         <h2 class="categories__title">Categorias</h2>
-       <div class="container__categories">
-        <div class="category category__active" data-filter="populares">
-          <img src="./assets/img/icons-categories/icon-masPopulares.png" alt="mas populares" />
-          <span>Populares</span>
-          <div class="category__rectangle"></div>
-          <button class="btn btn__active" data-categorie="populares"></button>
+        <div class="container__categories">
+          <div class="category category__active" data-filter="populares">
+            <img src="./assets/img/icons-categories/icon-masPopulares.png" alt="mas populares" />
+            <span>Populares</span>
+            <div class="category__rectangle"></div>
+            <button class="btn btn__active" data-categorie="populares"></button>
+          </div>
+          <div class="category" data-filter="pizzas">
+            <img src="./assets/img/icons-categories/icon-pizzas.png" alt="pizzas" />
+            <span>Pizzas</span>
+            <div class="category__rectangle"></div>
+            <button class="btn" data-categorie="pizzas"></button>
+          </div>
+          <div class="category" data-filter="hamburguesas">
+            <img src="./assets/img/icons-categories/icon-hamburguesa.png" alt="Hamburguesas" />
+            <span>Hamburguesas</span>
+            <div class="category__rectangle"></div>
+            <button class="btn" data-categorie="hamburguesas"></button>
+          </div>
+          <div class="category" data-filter="papas fritas">
+            <img src="./assets/img/icons-categories/icon-papasFritas.png" alt="papas fritas" />
+            <span>Napapuki</span>
+            <div class="category__rectangle"></div>
+            <button class="btn" data-categorie="papas fritas"></button>
+          </div>
+          <div class="category" data-filter="wraps">
+            <img src="./assets/img/icons-categories/icon-wraps.png" alt="wraps" />
+            <span>Wraps</span>
+            <div class="category__rectangle"></div>
+            <button class="btn" data-categorie="wraps"></button>
+          </div>
+          <div class="category" data-filter="mexican food">
+            <img src="./assets/img/icons-categories/icon-mexicanFood.png" alt="mexican food" />
+            <span>Mexican Food</span>
+            <div class="category__rectangle"></div>
+            <button class="btn" data-categorie="mexican food"></button>
+          </div>
+          <div class="category" data-filter="batidos">
+            <img src="./assets/img/icons-categories/icon-batidos.png" alt="batidos" />
+            <span>Batidos</span>
+            <div class="category__rectangle"></div>
+            <button class="btn" data-categorie="batidos"></button>
+          </div>
         </div>
-        <div class="category" data-filter="pizzas">
-          <img src="./assets/img/icons-categories/icon-pizzas.png" alt="pizzas" />
-          <span>Pizzas</span>
-          <div class="category__rectangle"></div>
-          <button class="btn" data-categorie="pizzas"></button>
-        </div>
-        <div class="category" data-filter="hamburguesas">
-          <img src="./assets/img/icons-categories/icon-hamburguesa.png" alt="Hamburguesas" />
-          <span>Hamburguesas</span>
-          <div class="category__rectangle"></div>
-          <button class="btn" data-categorie="hamburguesas"></button>
-        </div>
-        <div class="category" data-filter="papas fritas">
-          <img src="./assets/img/icons-categories/icon-papasFritas.png" alt="papas fritas" />
-          <span>Napapuki</span>
-          <div class="category__rectangle"></div>
-          <button class="btn" data-categorie="papas fritas"></button>
-        </div>
-        <div class="category" data-filter="wraps">
-          <img src="./assets/img/icons-categories/icon-wraps.png" alt="wraps" />
-          <span>Wraps</span>
-          <div class="category__rectangle"></div>
-          <button class="btn" data-categorie="wraps"></button>
-        </div>
-        <div class="category" data-filter="mexican food">
-          <img src="./assets/img/icons-categories/icon-mexicanFood.png" alt="mexican food" />
-          <span>Mexican Food</span>
-          <div class="category__rectangle"></div>
-          <button class="btn" data-categorie="mexican food"></button>
-        </div>
-        <div class="category" data-filter="batidos">
-          <img src="./assets/img/icons-categories/icon-batidos.png" alt="batidos" />
-          <span>Batidos</span>
-          <div class="category__rectangle"></div>
-          <button class="btn" data-categorie="batidos"></button>
-        </div>
-       </div>
       </div>
-      
     </section>
-
-
-
 
     <section class="reco_container popu">
       <div class="data_popu">
         <div class="container__categoty--title"></div>
-         <div class="popu-card-container"></div>
+        <div class="popu-card-container"></div>
       </div>
-      
     </section>
-
-
-    
-
-
 
     <!---------------------- Fin CATEGORIAS ------------------------>
 
-       
-  <!-- <div class="popu-card">
-    <div class="popu-img-container">
-       <img src="${}" alt="${}" />
-      </div>
-      <h3 class="popu-name">${}</h3>
-      <h3 class="popu-eslogan">${}n</h3>
-      <div class="popu-precio-btn-container">
-        <h2 class="popu-precio">$${}</h2>
-        <button class="popu-btn">Agregar</button> 
-      </div> 
-    </div> -->
- 
-   
-
-
-
-    
-    <!----------------------------------------------------------------------------------------->
+    <!-- MODAL CUANDO SE COMPRA EL CARRITO -->
+    <div class="container__modal disabled">
+      <i class="fa-regular fa-circle-check"></i>
+      <p>¡Gracias por comprar!</p>
+      <p>✨🎉✨</p>
+    </div>
 
     <script src="./assets/objectCategory.js" type="module"></script>
     <script src="./assets/index.js" type="module"></script>

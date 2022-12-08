@@ -16,9 +16,11 @@ const btnCartButtonClose = document.querySelector(".btn__cart--close");
 const btnComprarCart = document.querySelector(".btn__comprar--cart");
 const containerCartToggle = document.querySelector(".container__cart--toggle");
 const containerCartCards = document.querySelector(".container__products--cart");
-/* const containerCart = document.querySelector(".container__cart"); */
+const subtotalCart = document.querySelector(".subtotal__cart");
+const envioCalcCart = document.querySelector(".envio__calc--cart");
 const totalCart = document.querySelector(".cart__total");
 const bubbleCountCart = document.querySelector(".cart__bubble--count");
+const modalCart = document.querySelector(".container__modal");
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 const saveToLocalStorage = (key) => {
@@ -159,6 +161,18 @@ const getCartTotal = () => {
   return cart.reduce((acc, cur) => acc + Number(cur.precio) * cur.cantidad, 0);
 };
 
+/* Funcion para obtener el subtotal de la compra*/
+const showSubtotal = () => {
+  subtotalCart.innerHTML = `$${getCartTotal().toFixed(2)}`;
+};
+
+/* Funcion para calcular si el envio es gratuito o no */
+const freeShippingCalculate = () => {
+  getCartTotal() >= 2500
+    ? (envioCalcCart.innerHTML = "Gratis")
+    : (envioCalcCart.innerHTML = `$${(getCartTotal() * 10) / 100}`);
+};
+
 /* Funcion que rendeirza el total de la compra */
 const showTotal = () => {
   totalCart.innerHTML = `$${getCartTotal().toFixed(2)}`;
@@ -194,6 +208,8 @@ const btnDisable = (btn) => {
 const checkStateCart = () => {
   saveToLocalStorage(cart);
   renderCart(cart);
+  freeShippingCalculate(cart);
+  showSubtotal(cart);
   showTotal(cart);
   btnDisable(btnComprarCart);
   showBubbleCount(cart);
@@ -301,21 +317,40 @@ const btnSumar = (id) => {
   addUnitProduct(existCardProduct);
 };
 
+/* Funcion para el modal, despues de 3 segundos desaparece */
+const callModal = () => {
+  modalCart.classList.remove("disabled");
+  setTimeout(() => {
+    modalCart.classList.add("disabled");
+  }, 3000);
+};
+
+/* Funcion para comprar el carrito */
+const purchaseCart = () => {
+  if (cart == undefined) return;
+  cart = [];
+  checkStateCart();
+  toggleMenu();
+  callModal();
+};
+
 const init = () => {
   window.addEventListener("DOMContentLoaded", getCategory);
   window.addEventListener("DOMContentLoaded", getCategoryTitle);
+  window.addEventListener("DOMContentLoaded", renderCart);
+  window.addEventListener("DOMContentLoaded", showSubtotal);
+  window.addEventListener("DOMContentLoaded", freeShippingCalculate);
+  window.addEventListener("DOMContentLoaded", showTotal);
+  window.addEventListener("DOMContentLoaded", showBubbleCount);
+  window.addEventListener("DOMContentLoaded", btnDisable(btnComprarCart));
   containerCategories.addEventListener("click", changeCategory);
   containerCategories.addEventListener("click", getCategory);
   containerCategories.addEventListener("click", getCategoryTitle);
   btnCart.addEventListener("click", toggleMenu);
   btnCartButtonClose.addEventListener("click", toggleMenu);
-  window.addEventListener("DOMContentLoaded", renderCart);
-  window.addEventListener("DOMContentLoaded", showTotal);
-  window.addEventListener("DOMContentLoaded", showBubbleCount);
-  window.addEventListener("DOMContentLoaded", btnDisable(btnComprarCart));
   cardsContainer.addEventListener("click", addProductToCart);
-
   containerCartCards.addEventListener("click", handleQuantity);
+  btnComprarCart.addEventListener("click", purchaseCart);
 };
 
 init();
