@@ -1,6 +1,6 @@
 Integrantes:
-Fernando Perez 
-Gonzalo Amieva
-Joaquin Morante
-Leandro Torales
+Fernando Perez, 
+Gonzalo Amieva,
+Joaquin Morante,
+Leandro Torales,
 Paul Cartolin
