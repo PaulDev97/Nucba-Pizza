@@ -8,6 +8,419 @@
     
   }
 
+  /* EMPIEZA HEADER, NAVBAR, Y CARRITO ESTILOS */
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4vh 5%;
+  position: sticky;
+  top: 0;
+  background-color: #111;
+  z-index: 1;
+  
+}
+
+header svg {
+  width: 50px;
+  height: 40px;
+}
+
+/* Estilos navbar */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0;
+  width: 100%;
+}
+
+/* Iconos estilos navbar */
+.icon__house--navbar,
+.icon__cart--navbar,
+.icon__user--navbar {
+  font-size: 18px;
+  color: #ffa100;
+}
+
+/* Boton del carrito */
+.btn-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+}
+
+.btn-cart .disabled {
+  display: none;
+}
+/* Container Home icono y texto "home" */
+.a__main--navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 13px;
+  gap: 15px;
+}
+
+/* Burbuja contador carrito numero */
+.cart__bubble--count {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 10px;
+  width: 21px;
+  height: 20px;
+  color: #ffffff;
+  background: #ff4b4b;
+  border: 1px solid #ffffff;
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
+
+span {
+  color: white;
+}
+
+.container__cart--toggle {
+  display: none;
+}
+
+/* Container menu desplegable del carrito */
+.container__cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  height:90%;
+  background-color: #252525;
+  box-shadow: 0px 0px 50px rgb(1 2 7);
+  position: fixed;
+  top: 10;
+  right: 0px;
+  z-index: 1;
+}
+
+/* Medidas boton X cerrar */
+.container__button--close {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+/* Estilos boton X cerrar */
+.btn__cart--close {
+  width: 25px;
+  height: 25px;
+  background: linear-gradient(98.81deg, #ffa100 -0.82%, #fb103d 101.53%);
+  box-shadow: 11px 28px 50px rgba(20, 78, 90, 0.2);
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+/* Titulo */
+.span__tusProductos {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+/* Container de cards de carrito */
+.container__products--cart {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height: 50%;
+  width: 100%;
+  overflow-y: scroll;
+  gap: 15px;
+}
+
+.correction {
+  height: auto;
+  
+  justify-content: center;
+}
+
+/*----------Estilos scrollbar carrito ----------*/
+.container__products--cart::-webkit-scrollbar {
+  width: 11px;
+  height: auto;
+}
+
+.container__products--cart::-webkit-scrollbar-track {
+  background: linear-gradient(98.81deg, #ffa100 -0.82%, #fb103d 101.53%);
+}
+
+.container__products--cart::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 15px;
+  border: 3px solid #ffa100;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+/*----------Termina estilos scrollbar carrito ----------*/
+
+/* Estilos cards carrito */
+.render__products--cart {
+  display: flex;
+  background: #252525;
+  box-shadow: 0px 0px 50px rgb(1 2 7 / 50%);
+  border-radius: 15px;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 95%;
+  height: 100px;
+  gap: 3px;
+  
+}
+
+/* Medidas imagen carrito card comida */
+.image__container--cart {
+  width: 30%;
+  height: 85%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+}
+
+/* Flex card carrito */
+.info__card--cart {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.info__card--cart .title__card--cart {
+  font-size: 14px;
+  color: white;
+  font-weight: 500;
+}
+
+.info__card--cart .comentario__card--cart {
+  font-weight: 400;
+  font-size: clamp(12px, 14px, 100%);
+  letter-spacing: 1px;
+  opacity: 0.3;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+/* Estilos de precio de comida card */
+.info__card--cart .price__card--cart {
+  font-weight: 700;
+  font-size: 14px;
+  background: linear-gradient(98.81deg, #ffa100 -0.82%, #ffa100 -0.81%, #ff005c 101.53%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Container button add y minus cart */
+.amountSettings__card--cart {
+  display: flex;
+  align-items: center;
+  width: 10%;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+/* Medidas buttons add y minus de card en carrito */
+.container__minusButton--cart,
+.container__addButton--cart {
+  border-radius: 8px;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(98.81deg, #ffa100 -0.82%, #ffa100 -0.81%, #ff005c 101.53%);
+}
+
+.container__minusButton--cart {
+  opacity: 0.1;
+}
+
+/* Estilos y medidas buttons card cart */
+.button__minus--cart,
+.button__add--cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 20px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-width: 0;
+}
+
+/* Subtotal y envio */
+.container__subYEnvio--cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+/* Estilos a Subtotal, envios, y total */
+.cart__subtotal,
+.cart__envio,
+.container__cart--total {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 0 25px;
+}
+
+/* Linea divisoria cart */
+.line__divider {
+  background: rgba(157, 157, 157, 0.4);
+  width: 95%;
+  height: 2px;
+  border-radius: 15px;
+}
+
+.container__cart--total {
+  font-weight: 500;
+  font-size: 23px;
+}
+.cart__total {
+  color: #ff7a00;
+  font-weight: 700;
+  font-size: 23px;
+}
+
+/* Estilos button comprar cart */
+.btn__comprar--cart {
+  background: linear-gradient(98.81deg, #ffa100 -0.82%, #fb103d 101.53%);
+  box-shadow: 11px 28px 50px rgb(20 78 90 / 20%);
+  border-radius: 15px;
+  width: 254px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  color: #fefeff;
+}
+
+.span__showMoreProducts--cart {
+  letter-spacing: 1.5px;
+  font-size: 17px;
+  opacity: 0.3;
+  padding-bottom: 5px;
+  list-style: none;
+  text-decoration: none;
+  color: #ffffff;
+}
+.span__showMoreProducts--cart:hover {
+  text-decoration: underline;
+}
+
+.cart__empty--message {
+  color: white;
+  font: inherit;
+  font-size: 20px;
+  margin: 0 3%;
+  padding: 2%;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 3px 3px 2px black;
+  background: rgba(22, 84, 86, 0.763);
+  border-radius: 25px;
+}
+
+.btn__comprar--cart.disabled {
+  background: rgba(106, 106, 106, 0.486);
+  border: none;
+  cursor: not-allowed;
+}
+
+/* Modal */
+.container__modal {
+  width: 250px;
+  height: 250px;
+  background: rgba(106, 106, 106);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  position: fixed;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  animation-name: escalado;
+  animation-duration: 3s;
+}
+@keyframes escalado {
+  0% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+  99% {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+  }
+}
+.fa-circle-check {
+  font-size: 100px;
+  color: #53e653;
+}
+
+.container__modal p {
+  font-size: clamp(12px, 20px, 100%);
+}
+.disabled {
+  display: none;
+}
+/* ----------------------------------- */
+
+
+
+
+
+
+
   .slogan-container {
     width: 40%;
     display: flex;
@@ -354,6 +767,414 @@ button:hover {
 
 /* Iphone 12/13 Pro */
 @media screen and (max-width: 390px) {
+
+
+  header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4vh 5%;
+    position: sticky;
+    top: 0;
+    background-color: #111;
+    z-index: 1;
+    
+  }
+  
+  header svg {
+    width: 50px;
+    height: 40px;
+  }
+
+  /* Estilos navbar */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0;
+  width: 100%;
+}
+
+.icon__house--navbar,
+.icon__cart--navbar,
+.icon__user--navbar {
+  font-size: 18px;
+  color: #ffa100;
+}
+
+/* Boton del carrito */
+.btn-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+}
+
+.btn-cart .disabled {
+  display: none;
+}
+/* Container Home icono y texto "home" */
+.a__main--navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 13px;
+  gap: 15px;
+}
+
+/* Burbuja contador carrito numero */
+.cart__bubble--count {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 10px;
+  width: 21px;
+  height: 20px;
+  color: #ffffff;
+  background: #ff4b4b;
+  border: 1px solid #ffffff;
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
+
+span {
+  color: white;
+}
+
+.container__cart--toggle {
+  display: none;
+}
+
+/* Container menu desplegable del carrito */
+.container__cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  height:90%;
+  background-color: #252525;
+  box-shadow: 0px 0px 50px rgb(1 2 7);
+  position: fixed;
+  top: 10;
+  right: 0px;
+  z-index: 1;
+}
+
+/* Medidas boton X cerrar */
+.container__button--close {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+/* Estilos boton X cerrar */
+.btn__cart--close {
+  width: 25px;
+  height: 25px;
+  background: linear-gradient(98.81deg, #ffa100 -0.82%, #fb103d 101.53%);
+  box-shadow: 11px 28px 50px rgba(20, 78, 90, 0.2);
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+/* Titulo */
+.span__tusProductos {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+/* Container de cards de carrito */
+.container__products--cart {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height: 50%;
+  width: 100%;
+  overflow-y: scroll;
+  gap: 15px;
+}
+
+.correction {
+  height: auto;
+  
+  justify-content: center;
+}
+
+/*----------Estilos scrollbar carrito ----------*/
+.container__products--cart::-webkit-scrollbar {
+  width: 11px;
+  height: auto;
+}
+
+.container__products--cart::-webkit-scrollbar-track {
+  background: linear-gradient(98.81deg, #ffa100 -0.82%, #fb103d 101.53%);
+}
+
+.container__products--cart::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 15px;
+  border: 3px solid #ffa100;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+/*----------Termina estilos scrollbar carrito ----------*/
+
+/* Estilos cards carrito */
+.render__products--cart {
+  display: flex;
+  background: #252525;
+  box-shadow: 0px 0px 50px rgb(1 2 7 / 50%);
+  border-radius: 15px;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 95%;
+  height: 100px;
+  gap: 3px;
+  
+}
+
+/* Medidas imagen carrito card comida */
+.image__container--cart {
+  width: 30%;
+  height: 85%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+}
+
+/* Flex card carrito */
+.info__card--cart {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.title__card--cart {
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+}
+
+.comentario__card--cart {
+  font-weight: 400;
+  font-size: clamp(12px, 14px, 100%);
+  letter-spacing: 1px;
+  opacity: 0.3;
+  color: #ffffff;
+}
+
+/* Estilos de precio de comida card */
+.price__card--cart {
+  font-weight: 700;
+  font-size: 20px;
+  background: linear-gradient(98.81deg, #ffa100 -0.82%, #ffa100 -0.81%, #ff005c 101.53%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Container button add y minus cart */
+.amountSettings__card--cart {
+  display: flex;
+  align-items: center;
+  width: 20%;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+/* Medidas buttons add y minus de card en carrito */
+.container__minusButton--cart,
+.container__addButton--cart {
+  border-radius: 8px;
+  width: 25px;
+  height: 25px;
+  background: linear-gradient(98.81deg, #ffa100 -0.82%, #ffa100 -0.81%, #ff005c 101.53%);
+}
+
+.container__minusButton--cart {
+  opacity: 0.1;
+}
+
+/* Estilos y medidas buttons card cart */
+.button__minus--cart,
+.button__add--cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 20px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-width: 0;
+}
+
+/* Subtotal y envio */
+.container__subYEnvio--cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+/* Estilos a Subtotal, envios, y total */
+.cart__subtotal,
+.cart__envio,
+.container__cart--total {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 0 25px;
+}
+
+/* Linea divisoria cart */
+.line__divider {
+  background: rgba(157, 157, 157, 0.4);
+  width: 95%;
+  height: 2px;
+  border-radius: 15px;
+}
+
+.container__cart--total {
+  font-weight: 500;
+  font-size: 23px;
+}
+.cart__total {
+  color: #ff7a00;
+  font-weight: 700;
+  font-size: 23px;
+}
+
+/* Estilos button comprar cart */
+.btn__comprar--cart {
+  background: linear-gradient(98.81deg, #ffa100 -0.82%, #fb103d 101.53%);
+  box-shadow: 11px 28px 50px rgb(20 78 90 / 20%);
+  border-radius: 15px;
+  width: 254px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  color: #fefeff;
+}
+
+.span__showMoreProducts--cart {
+  letter-spacing: 1.5px;
+  font-size: 17px;
+  opacity: 0.3;
+  padding-bottom: 5px;
+  list-style: none;
+  text-decoration: none;
+  color: #ffffff;
+}
+.span__showMoreProducts--cart:hover {
+  text-decoration: underline;
+}
+
+.cart__empty--message {
+  color: white;
+  font: inherit;
+  font-size: 20px;
+  margin: 0 3%;
+  padding: 2%;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 3px 3px 2px black;
+  background: rgba(22, 84, 86, 0.763);
+  border-radius: 25px;
+}
+
+.btn__comprar--cart.disabled {
+  background: rgba(106, 106, 106, 0.486);
+  border: none;
+  cursor: not-allowed;
+}
+
+/* Modal */
+.container__modal {
+  width: 250px;
+  height: 250px;
+  background: rgba(106, 106, 106);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  position: fixed;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  animation-name: escalado;
+  animation-duration: 3s;
+}
+@keyframes escalado {
+  0% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+  99% {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+  }
+}
+.fa-circle-check {
+  font-size: 100px;
+  color: #53e653;
+}
+
+.container__modal p {
+  font-size: clamp(12px, 20px, 100%);
+}
+.disabled {
+  display: none;
+}
+/* ----------------------------------- */
+
+
+
 
   /* Main */
 
